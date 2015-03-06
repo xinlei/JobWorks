@@ -1,3 +1,9 @@
+#index {
+    background-image: url(../IMG/background-light.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
 #main_cont {
     height: 100%;
 }
