@@ -1,11 +1,17 @@
 #index {
-    background-image: url(../IMG/background-light.jpg);
+    /*background-image: url(../IMG/background-light.jpg);*/
     background-repeat: no-repeat;
     background-position: center top;
+    background-color: rgba(0,0,0,0.1); 
 }
 
 #main_cont {
     height: 100%;
+}
+
+#logo {
+    position: relative;
+    top: -100px;
 }
 
 #c_text {
@@ -15,14 +21,16 @@
 }
 
 #quote {
+    position: relative;
     font-style: Helvetica;
     text-align: center;
     font-style: italic; 
+    top: -200px;
 }
 
 #start_button {
     position: relative;
-    top: 200px; 
+    top: -150px;
 }
 
 #description_txt {
@@ -41,6 +49,11 @@
     text-align: center;
 }
 
+.Q_label {
+    font-size: 20px;
+    text-align: center;
+}
+
 #progress_holder {
     text-align: center;
     font-size: 30px;
@@ -50,4 +63,28 @@
     margin-right: 30px;
     margin-left: 30px;
     width: 150px;
+}
+
+#upload_button {
+    background-color: silver;
+}
+
+#construction_drop {
+    position: relative;
+    left: 200px;
+}
+
+#transition {
+    background-image: url(../IMG/transition.png);
+    background-repeat: no-repeat;
+}
+
+#congrats_img {
+    width: 100%;
+    height: 100%;
+}
+
+#t_buttons {
+    position: relative;
+    top: 600px;
 }
