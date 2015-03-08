@@ -15,6 +15,9 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <!-- Google hosted jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
     <div id="progress" class="row">
@@ -22,10 +25,12 @@
         <div class="col-md-8">
             
             <div class="progress">
+              <a href="P1.html">
               <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 9.1%">
                 <span class="sr-only">9% Complete (success)</span>
                 1
               </div>
+              </a>
               <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
                 <span class="sr-only">9% Complete (warning)</span>
                 2
@@ -78,7 +83,8 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <center><label class="Q_label" for="exampleInputEmail1">What is your name?</label></center>
+            <label class="Q_label" for="exampleInputEmail1">What's your name?</label>
+            <p class="helper_text">It's a pleasure to meet you!</p>
             <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="first name, last name"></center>
         </div>
         <div class="col-md-2"></div>
@@ -86,15 +92,17 @@
     <div class="row">
     <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <center><label class="Q_label" for="exampleInputEmail1">How old are you?</label></center>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="age"></center>
+            <label class="Q_label" for="exampleInputEmail1">What's your email address?</label>
+            <p class="helper_text">Do not use an email address with unprofessional names, numbers. Try to use an email address ending in @gmail or @yahoo. </p>
+            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="example@email.com"></center>
         </div>
         <div class="col-md-2"></div>
     </div><br>
     <div class="row">
     <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <center><label class="Q_label" for="exampleInputEmail1">What is your phone number??</label></center>
+            <label class="Q_label" for="exampleInputEmail1">What's a phone number we can reach you at?</label>
+            <p class="helper_text">Make sure you have a professional voicemail (record your name, use the default, etc.)</p>
             <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="(xxx) xxx - xxxx"></center>
         </div>
         <div class="col-md-2"></div>
@@ -102,7 +110,8 @@
     <div class="row">
     <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <center><label class="Q_label" for="exampleInputEmail1">What is your email?</label></center>
+            <label class="Q_label" for="exampleInputEmail1">Social Security Number</label>
+            <p class="helper_text">It's a pleasure to meet you!</p>
             <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="example@email.com"></center>
         </div>
         <div class="col-md-2"></div>
@@ -110,8 +119,9 @@
      <div class="row">
     <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-                <center><label class="Q_label" for="exampleInputEmail1">Let's see a photo!</label></center>
-                <center><a id="upload_button" class="btn btn-lg" href="#">Upload Photo</a></center>
+                <label class="Q_label" for="exampleInputEmail1">Let's see a photo!</label>
+                <p class="helper_text">It's a pleasure to meet you!</p>
+                <a id="upload_button" class="btn btn-lg Q_label" href="#">Upload Photo</a>
         </div>
         <div class="col-md-2"></div>
     </div><br>

@@ -5,16 +5,19 @@
 
 <head>
     <title>JobWorks</title>
-    <link rel="stylesheet" type="text/css" href="CSS/general.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/general.css">
+
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- Google hosted jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
     <div id="progress" class="row">
@@ -22,18 +25,26 @@
         <div class="col-md-8">
             
             <div class="progress">
+            <a href="P1.html">
               <div class="progress-bar progress-bar-success" style="width: 9.1%">
                 1
               </div>
+              </a>
+              <a href="P2.html">
               <div class="progress-bar progress-bar-success" style="width: 9.1%">
                 2
               </div>
+              </a>
+              <a href="P3.html">
               <div class="progress-bar progress-bar-success" style="width: 9.1%">
                 3
               </div>
+              </a>
+              <a href="P4.html">
               <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 9.1%">
                 4
               </div>
+              </a>
               <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
                 5
               </div>
@@ -61,54 +72,307 @@
     </div><br>
     <div id="page_description" class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8"><p id="description_txt">Work Interests</p></div>
+        <div class="col-md-8"><p id="description_txt">What Type of Work Excites You?</p></div>
         <div class="col-md-2"></div>
     </div><br><br>
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <center><label class="Q_label" for="exampleInputEmail1">Employer?</label></center>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="company"></center>
+        <div class="form-group col-md-1">
+            <a class="btn btn-small btn-primary option_button" id="construction_button" href="#">Construction</a>  
+        </div>
+        <div class="form-group col-md-1">
+            <a class="btn btn-small btn-primary option_button" id="office_button" href="#">Office Work</a>  
+        </div>
+        <div class="form-group col-md-1">
+            <a class="btn btn-small btn-primary option_button" id="warehouse_button" href="#">Warehouse</a>  
+        </div>
+        <div class="form-group col-md-1">
+            <a class="btn btn-small btn-primary option_button" id="sales_button" href="#">Sales/Retail</a>  
+        </div>
+        <div class="form-group col-md-1">
+            <a class="btn btn-small btn-primary option_button" id="automotive_button" href="#">Automotive</a>  
+        </div>
+        <div class="form-group col-md-1">
+            <a class="btn btn-small btn-primary option_button" id="caregiving_button" href="#">Caregiving</a>  
+        </div>
+        <div class="form-group col-md-1">
+            <a class="btn btn-small btn-primary option_button" id="culinary_button" href="#">Culinary</a>  
+        </div>
+        <div class="form-group col-md-1">
+            <a class="btn btn-small btn-primary option_button" id="financial_button" href="#">Financial</a>  
         </div>
         <div class="col-md-2"></div>
     </div><br>
     <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <center><label class="Q_label" for="exampleInputEmail1">Company Location?</label></center>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="address"></center>
+        <div class="col-md-2"></div>
+        <div class="form-group col-md-1">
+            <div id="construction_menu">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Landscaping
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Metal Work
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Carpentry
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Flooring
+                    </label>
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Electrical
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Roofing
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Concrete
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Plumbing
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Painting
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Tiling
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Soldering
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Welding
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+            <div id="office_menu">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Scheduling
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Reception
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Data Entry
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Filing
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Mail
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Draft Memos
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Greet Visitors
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Book Keeping
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Accounting
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Electrical
+                    </label>
+                </div>
+
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+            <div id="warehouse_menu">
+                
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Loading and Unloading Trucks
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Can Lift:
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Forklift Certified
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Heavy Machinery
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+            <div id="sales_menu">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Set Up and Demonstrations
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Product Sales
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+            <div id="automotive_menu">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Mechanic
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Detailer
+                    </label>
+                </div>
+            </div> 
+        </div>
+        <div class="form-group col-md-1">
+            <div id="caregiving_menu">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Elderly
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Disabled
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Youth
+                    </label>
+                </div>
+            </div> 
+        </div>
+        <div class="form-group col-md-1">
+            <div id="culinary_menu">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Food Prep
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Knife Skills
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Baking
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Wok/Panfry
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Short Order Book
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Catering
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Waiter/Waitress
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Dishwasher
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> SerySafe Certified
+                    </label>
+                </div>
+            </div> 
+        </div>
+        <div class="form-group col-md-1">
+            <div id="financial_menu">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Corporate Financials
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Cash for Clients
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Cashier
+                    </label>
+                </div>
+                
+            </div>  
         </div>
         <div class="col-md-2"></div>
-    </div><br>
+    </div>
     <div class="row">
     <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <center><label class="Q_label" for="exampleInputEmail1">Job Title?</label></center>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="Position"></center>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <center><label class="Q_label" for="exampleInputEmail1">Responsibilities?</label></center>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="what did you do?"></center>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <center><label class="Q_label" for="exampleInputEmail1">Reasons for Leaving?</label></center>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="why did you stop?"></center>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <center><label class="Q_label" for="exampleInputEmail1">Hours Per Week?</label></center>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="How long did you work weekly?"></center>
+            <label class="Q_label" for="exampleInputEmail1">Other Job Interests</label>
+            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="Interested in something not listed?"></center>
         </div>
         <div class="col-md-2"></div>
     </div><br>
@@ -127,3 +391,31 @@
     </div><br>
 
 </body> 
+
+<script>
+    $("#construction_button").click(function() {
+        $('#construction_menu').toggle();
+    });
+    $("#office_button").click(function() {
+        $('#office_menu').toggle();
+    });
+    $("#warehouse_button").click(function() {
+        $('#warehouse_menu').toggle();
+    });
+    $("#sales_button").click(function() {
+        $('#sales_menu').toggle();
+    });
+    $("#automotive_button").click(function() {
+        $('#automotive_menu').toggle();
+    });
+    $("#caregiving_button").click(function() {
+        $('#caregiving_menu').toggle();
+    });
+    $("#culinary_button").click(function() {
+        $('#culinary_menu').toggle();
+    });
+    $("#financial_button").click(function() {
+        $('#financial_menu').toggle();
+    });
+
+</script>

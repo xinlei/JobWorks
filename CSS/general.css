@@ -52,6 +52,13 @@
 .Q_label {
     font-size: 20px;
     text-align: center;
+    position: relative;
+    left: 175px;
+}
+
+.helper_text {
+    position: relative;
+    left: 175px;
 }
 
 #progress_holder {
@@ -63,6 +70,10 @@
     margin-right: 30px;
     margin-left: 30px;
     width: 150px;
+}
+
+.option_button {
+    width: 110px;
 }
 
 #upload_button {
@@ -87,4 +98,24 @@
 #t_buttons {
     position: relative;
     top: 600px;
+}
+
+.radio, .checkbox {
+    padding-left: 0px;
+}
+
+#construction_menu, #office_menu, #warehouse_menu, #sales_menu, #automotive_menu, #caregiving_menu, #culinary_menu, #financial_menu {
+    display: none;
+}
+
+.Resume_Upload_Label {
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.area_label {
+    font-size: 20px;
+    text-align: center;
+    position: relative;
 }
