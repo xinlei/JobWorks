@@ -88,3 +88,20 @@
     position: relative;
     top: 600px;
 }
+
+#profile_button {
+    position: relative;
+    top: -650px;
+}
+
+#status_button {
+    position: relative;
+    top: -650px;
+}
+
+#container_button {
+    width: 359px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
