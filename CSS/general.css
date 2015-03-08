@@ -136,3 +136,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.inline_table {
+    display: inline;
+}
