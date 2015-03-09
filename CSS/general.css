@@ -157,6 +157,11 @@
     font-family: 'Raleway',sans-serif;
 }
 
+<<<<<<< HEAD
 .growth_image {
     position: absolute;
+=======
+.inline_table {
+    display: inline;
+>>>>>>> 05887ab88f128fea5868be835f52e731b61dfbc7
 }
