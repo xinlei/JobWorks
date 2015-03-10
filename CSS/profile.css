@@ -1,0 +1,42 @@
+* {
+	font-family: 'Raleway',sans-serif;
+}
+
+#image img {
+	height: 118px;
+}
+
+#image {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.divider {
+	height: 70px;
+}
+
+.divider-2 {
+	height: 30px;
+}
+
+.days td {
+	font-size: 20px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	text-align: center;
+	width: 120px;
+}
+
+.skills td {
+	font-size: 20px;
+	text-align: center;
+	width: 120px;
+}
+
+.skills .star {
+	font-size: 40px;
+}
+
+.title {
+	margin-bottom: 15px;
+}
