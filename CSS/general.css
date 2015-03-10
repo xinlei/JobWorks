@@ -76,6 +76,10 @@
     font-size: 30px;
 }
 
+#progress {
+    margin-top: 15px;
+}
+
 #back_button,#next_button {
     margin-right: 30px;
     margin-left: 30px;
@@ -132,9 +136,10 @@
 
 .area_label {
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     position: relative;
     font-family: 'Raleway',sans-serif;
+    line-height: 30px;
 }
 
 #profile_button {
@@ -157,11 +162,61 @@
     font-family: 'Raleway',sans-serif;
 }
 
-<<<<<<< HEAD
 .growth_image {
     position: absolute;
-=======
+    left: -100px;
+}
+
+#growth_image1 {
+    position: absolute;
+}
+#growth_image2 {
+    position: absolute;
+    top: 500px;
+
+}
+#growth_image3 {
+    position: absolute;
+    top: 780px;
+
+}
+#growth_image4 {
+    position: absolute;
+    top: 1150px;
+
+}
+#growth_image5 {
+    position: absolute;
+    top: 1740px;
+
+}
+
 .inline_table {
     display: inline;
->>>>>>> 05887ab88f128fea5868be835f52e731b61dfbc7
+}
+
+#story_paragraph {
+    text-align: left;
+}
+
+#story_text {
+    margin-bottom: 10px;
+}
+
+.story_helper_text {
+    font-size: 12px;
+    font-style: italic;
+    position: relative;
+}
+
+* {
+  .border-radius(0);
+}
+
+#field {
+    margin-bottom:20px;
+}
+
+#appends input[id^='field'] {
+    height: 34px;
 }
