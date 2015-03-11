@@ -2,29 +2,46 @@
 	font-family: 'Raleway',sans-serif;
 }
 
-#image img {
-	height: 118px;
+.content {
+	height: 750px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	-webkit-box-shadow: 6px 6px 31px 9px rgba(173,173,173,0.72);
+	-moz-box-shadow: 6px 6px 31px 9px rgba(173,173,173,0.72);
+	box-shadow: 6px 6px 31px 9px rgba(173,173,173,0.72);
 }
 
-#image {
-	padding-top: 20px;
-	text-align: center;
+.image {
+	margin-top: 10px;
+}
+
+.icon {
+	padding: 10px 50px;
 }
 
 .divider {
-	height: 70px;
+	height: 60px;
 }
 
 .divider-2 {
-	height: 30px;
+	height: 10px;
+}
+
+.days {
+	background-color: lightgrey;
 }
 
 .days td {
 	font-size: 20px;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
 	text-align: center;
-	width: 120px;
+	width: 140px;
+	padding: 5px 5px; 
+}
+
+.skills {
+	background-color: lightgrey;
 }
 
 .skills td {
@@ -39,4 +56,28 @@
 
 .title {
 	margin-bottom: 15px;
+}
+
+.header {
+	height: 80px;
+}
+
+.name {
+	text-align: left;
+}
+
+.link {
+	padding: 7px;
+}
+
+h1 {
+	float: left;
+}
+
+h5 {
+	float: right;
+}
+
+.button {
+	padding-top: 10px;
 }
