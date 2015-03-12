@@ -148,19 +148,19 @@
 
 #profile_button {
     position: relative;
-    top: -650px;
     font-family: 'Raleway',sans-serif;
 }
 
 #status_button {
     position: relative;
-    top: -650px;
     font-family: 'Raleway',sans-serif;
 }
 
 #container_button {
     width: 359px;
     display: block;
+    position: relative;
+    top: 440px;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Raleway',sans-serif;
@@ -275,7 +275,28 @@
     text-align: left;
 }
 
+#final_logo {
+    height: 400px;
+    position: absolute;
+    display: block;
+}
 
+#congrats_text {
+    position: relative;
+    top: 300px; 
+    font-size: 60px; 
+    font-family: 'Raleway',sans-serif;
+}
 
-
-
+#final_background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+}
+/*#final_landing {
+    background-image: url(../IMG/background-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*/
