@@ -15,6 +15,7 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -23,76 +24,281 @@
         <div class="col-md-8">
             
             <div class="progress">
-            <a href="P1.html">
-              <div class="progress-bar progress-bar-success" style="width: 9.1%">
+                <a href="P1.html">
+              <div class="progress-bar progress-bar-success" style="width: 16.6%">
                 1
               </div>
-              </a>
+          </a>
               <a href="P2.html">
-              <div class="progress-bar progress-bar-success" style="width: 9.1%">
+              <div class="progress-bar progress-bar-success" style="width: 16.6%">
                 2
               </div>
-              </a>
+          </a>
               <a href="P3.html">
-              <div class="progress-bar progress-bar-success" style="width: 9.1%">
+              <div class="progress-bar progress-bar-success" style="width: 16.6%">
                 3
               </div>
-              </a>
+          </a>
               <a href="P4.html">
-              <div class="progress-bar progress-bar-success" style="width: 9.1%">
+              <div class="progress-bar progress-bar-success" style="width: 16.6%">
                 4
               </div>
-              </a>
+          </a>
               <a href="P5.html">
-              <div class="progress-bar progress-bar-success" style="width: 9.1%">
+              <div class="progress-bar progress-bar-success" style="width: 16.6%">
                 5
               </div>
-              </a>
+          </a>
               <a href="P6.html">
-              <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 9.1%">
-                6
-              </div>
+                <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 17%">
+                  6
+                </div>
               </a>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
-                7
-              </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
-                8
-              </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
-                9
-              </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
-                10
-              </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9%">
-                11
-              </div>
             </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-2">
+          <a id="save_button" class="btn btn-success" href="#">Save Progress</a> 
+        </div>
     </div><br>
     <div id="page_description" class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8"><p id="description_txt">Credentials</p></div>
-        <div class="col-md-2"></div>
+        <div class="col-md-8"><p id="description_txt">Your Story</p></div>
+        <div class="col-md-2">
+            <img src="IMG/treegrowth2.png" class="growth_image" id="growth_image1">
+            <img src="IMG/treegrowth3.png" class="growth_image" id="growth_image2">
+            <img src="IMG/treegrowth4.png" class="growth_image" id="growth_image3">
+            <img src="IMG/treegrowth5.png" class="growth_image" id="growth_image4">
+            <img src="IMG/treegrowth6.png" class="growth_image" id="growth_image5">
+        </div>
     </div><br><br>
-     <div class="row">
-    <div class="col-md-2"></div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-                <center><label class="Resume_Upload_Label" for="exampleInputEmail1">Let's see your Resume!</label></center><br>
-                <center><a id="upload_button" class="btn btn-lg" href="#">Upload Resume</a></center>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <label class="area_label">My name is Paul Mathis and this is my story. 
+
+I am originally from Cleveland, Ohio and received my education from Garfield Heights High School and am working towards my associates degree in construction management from San Jose City College.  
+
+I came to the Bay Area in 2004 because I was looking to find jobs in the construction industry. I am interested in construction and wholesale jobs with my skills in flooring, carpentry, and forklift operation. 
+
+In my last job, I was a store clerk at Lowe’s East Palo Alto from August 2014 to November 2014. My proudest accomplishments at this job were helping several customers every day find what they were looking for and suggesting flooring solutions for their problems. If you would like see my other positions, my resume can be found here [link]. </label>
+              </div>
+              <div class="col-md-2"></div>
+            </div><br>
+
+            <form class="form-inline">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <label class="area_label">In</label>
+                <input type="text" class="form-control" id="year_input" placeholder="year">
+                <label class="area_label">,</label>
+              </div>
+              <div class="col-md-2"></div>
+              </form>
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <label class="area_label" >I became homeless after… </label>
+              </div>
+              <div class="col-md-2">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+              <label class="area_label story_helper_text">What event triggered you becoming unhoused (for example, losing your job). Remember, this is not meant for people to judge you; instead, it is a chance to tell your story as to how you got to where you are today. </label>
+              </div>
+              <div class="col-md-2"></div>
+              
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <textarea class="form-control" rows="4" placeholder=""></textarea>
+              <div class="col-md-2"></div>
+            </div>
+            </div><br>
+            <form class="form-inline">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <label class="area_label">In</label>
+                <input type="text" class="form-control" id="year_input" placeholder="year">
+                <label class="area_label">,</label>
+              </div>
+              <div class="col-md-2"></div>
+              </form>
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <label class="area_label" >I found the Downtown Streets Team (DST), which helps unhoused individuals through a work-first model, where I volunteer on various community projects to build my work skills. Through DST, I have developed the following traits:  </label>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+              <label class="area_label story_helper_text">You’ve done a lot of amazing work through DST - share how DST has made you a better person through five traits you have built. For example: hard working or compassionate. </label>
+              </div>
+              <div class="col-md-2"></div>
+              
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <div class="container">
+                  <div class="row">
+                    <input type="hidden" name="count" value="1" />
+                        <div class="control-group" id="fields">
+                            <label class="control-label" for="field1">Traits</label>
+                            <div class="controls" id="profs"> 
+                                <form class="input-append" id="appends">
+                                    <div id="field"><input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Trait" data-items="8"/><button id="b1" class="btn btn-success add-more" type="button">+</button></div>
+                                </form>
+                            <br>
+                            <small>Press + to add another form field :)</small>
+                            </div>
+                        </div>
+                  </div>
+                </div>
+              <div class="col-md-2"></div>
+            </div>
+            </div><br>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <label class="area_label" >I am proud of the time I showed how I was </label>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+              <label class="area_label story_helper_text">It’s your time to shine! What is your strongest characteristic? Are you driven, resourceful, or a team player? </label>
+              </div>
+              <div class="col-md-2"></div>
+              
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <textarea class="form-control" rows="4" placeholder=""></textarea>
+              <div class="col-md-2"></div>
+            </div>
+            </div><br>
+
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+              <label class="area_label story_helper_text"> Now tell us about a time you really showed off your strongest characteristic. This could be from your childhood to something you did at DST - tell us a story of when you were driven, resourceful, or a team player!  </label>
+              </div>
+              <div class="col-md-2"></div>
+              
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <textarea class="form-control" rows="4" placeholder=""></textarea>
+              <div class="col-md-2"></div>
+            </div>
+            </div><br>
+
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <label class="area_label" >(Optional) However, it is also important that people know that… </label>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+              <label class="area_label story_helper_text">This is the time to explain your unique circumstances. Do you have a criminal background? Are you looking for special assistance? Explain all of that in this section. </label>
+              </div>
+              <div class="col-md-2"></div>
+              
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <textarea class="form-control" rows="4" placeholder=""></textarea>
+              <div class="col-md-2"></div>
+            </div>
+            </div><br>
+
+
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <label class="area_label" >My dream job is… </label>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+              <label class="area_label story_helper_text">What small goals do you need to reach your big goal of getting your dream job? Do you need to first finding stable housing? Or do you want to improve your work ethic by holding a job for more than 6 months?</label>
+              </div>
+              <div class="col-md-2"></div>
+              
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <textarea class="form-control" rows="4" placeholder=""></textarea>
+              <div class="col-md-2"></div>
+            </div>
+            </div><br>
+
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <label class="area_label" >In pursuit of this dream, I am trying to reach the following goals while I am at DST: </label>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+              <label class="area_label story_helper_text"> What small goals do you need to reach your big goal of getting your dream job? Do you need to first finding stable housing? Or do you want to improve your work ethic by holding a job for more than 6 months? </label>
+              </div>
+              <div class="col-md-2"></div>
+              
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <textarea class="form-control" rows="4" placeholder=""></textarea>
+              <div class="col-md-2"></div>
+            </div>
+            </div><br>
+
+
         </div>
         <div class="col-md-2"></div>
     </div><br>
-     <div class="row">
-    <div class="col-md-2"></div>
-    </div>
-     <div class="row">
+
+    <div class="row">
     <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-                <label class="Q_label" for="exampleInputEmail1">References</label>
-                <center><img src="IMG/ref.png"></center>
+                <label class="Q_label" >Upload a Photo!</label>
+                <p class="helper_text"> A picture is worth a thousand words. Share memories, projects you’ve worked on - anything that represents who you are!</p>
+                <a id="upload_button" class="btn btn-lg Q_label" href="#">Upload Photo</a>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+                <label class="Q_label" >Upload a Video! (Optional)</label>
+                <p class="helper_text"> If a picture is worth a thousand words, what do you think a video could be worth??</p>
+                <a id="upload_button" class="btn btn-lg Q_label" href="#">Upload Photo</a>
         </div>
         <div class="col-md-2"></div>
     </div><br>
@@ -100,11 +306,42 @@
         <div class="col-md-2"></div>
         <div class="form-group col-md-8">
             <center>
-                <a id="back_button" class="btn btn-primary btn-warning btn-lg" href="P5.html">Back</a>    
-                <a id="next_button" class="btn btn-primary btn-lg" href="transition.html">Next</a>  
+                <a id="back_button" class="btn btn-primary btn-warning btn-lg" href="transition.html">Back</a>    
+                <a id="next_button" class="btn btn-primary btn-lg" href="final_landing.html">Submit</a>  
             </center>
         </div>
         <div class="col-md-2"></div>
     </div><br>
 
 </body> 
+
+<script>
+$(document).ready(function(){
+    var next = 1;
+    $(".add-more").click(function(e){
+        e.preventDefault();
+        var addto = "#field" + next;
+        var addRemove = "#field" + (next);
+        next = next + 1;
+        var newIn = '<input autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text">';
+        var newInput = $(newIn);
+        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-default remove-me" >x</button></div><div id="field">';
+        var removeButton = $(removeBtn);
+        $(addto).after(newInput);
+        $(addRemove).after(removeButton);
+        $("#field" + next).attr('data-source',$(addto).attr('data-source'));
+        $("#count").val(next);  
+        
+            $('.remove-me').click(function(e){
+                e.preventDefault();
+                var fieldNum = this.id.charAt(this.id.length-1);
+                var fieldID = "#field" + fieldNum;
+                $(this).remove();
+                $(fieldID).remove();
+            });
+    });
+    
+
+    
+});
+</script>

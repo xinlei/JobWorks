@@ -223,4 +223,48 @@
 
 #appends input[id^='field'] {
     height: 34px;
+    width: 150px;
 }
+
+#save_button {
+    position: fixed;
+}
+
+#b1 {
+}
+
+#job_field {
+    margin-bottom:20px;
+}
+
+#appends input[id^='job_field'] {
+    position: relative;
+    height: 34px;
+    width: 350px;
+}
+
+#add_employer_cont {
+    position: relative;
+    left: 132px;
+}
+
+#employer1, #employer2, #employer3, #employer4 {
+    display: none;
+}
+
+#appends input[id^='job_field'] {
+
+
+
+}
+
+#min_job_button1, #min_job_button2,#min_job_button3,#min_job_button4 {
+    display: none;
+}
+
+
+
+
+
+
+

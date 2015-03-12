@@ -5,7 +5,6 @@
 
 <head>
     <title>JobWorks</title>
-    <link rel="stylesheet" type="text/css" href="CSS/general.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -16,6 +15,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="CSS/general.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
     <div id="progress" class="row">
@@ -23,105 +24,127 @@
         <div class="col-md-8" class="fixed_bar">
             
             <div class="progress">
-              <a href="P1.html">
-              <div class="progress-bar progress-bar-success" style="width: 9.1%">
+                <a href="P1.html">
+              <div class="progress-bar progress-bar-success" style="width: 16.6%">
                 1
               </div>
-              </a>
+          </a>
               <a href="P2.html">
-              <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 9.1%">
+              <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 16.6%">
                 2
               </div>
-              </a>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
+          </a>
+              <a href="P3.html">
+              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 16.6%">
                 3
               </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
+          </a>
+              <a href="P4.html">
+              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 16.6%">
                 4
               </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
+          </a>
+              <a href="P5.html">
+              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 16.6%">
                 5
               </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
-                6
-              </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
-                7
-              </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
-                8
-              </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
-                9
-              </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9.1%">
-                10
-              </div>
-              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 9%">
-                11
-              </div>
+          </a>
+              <a href="P6.html">
+                <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 17%">
+                  6
+                </div>
+              </a>
             </div>
         </div>
-        <div class="col-md-2" class="fixed_bar"></div>
+        <div class="col-md-2" class="fixed_bar">
+          
+          <a id="save_button" class="btn btn-success" href="#">Save Progress</a> 
+        </div>
     </div><br>
     <div id="page_description" class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8"><p id="description_txt">What You've Done</p></div>
         <div class="col-md-2"></div>
     </div><br><br>
+    <div id="employer1">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <label class="Q_label" for="exampleInputEmail1">Employer</label>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="Name of the company"></center>
+            <label class="Q_label" >Employer 1</label> 
+            <p class="helper_text">What was the name of the business or the name of the person you worked for? </p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Lowe’s, Safeway, Jennifer Smith"></center>
+            </div>
+            <div class="col-md-2"></div>
+        </div><br>
+
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Address</label>
+             <p class="helper_text">What was the address of the place you worked at?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: 1234 Main Street Palo Alto, CA"></center>
         </div>
         <div class="col-md-2"></div>
     </div><br>
     <div class="row">
     <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <label class="Q_label" for="exampleInputEmail1">Address</label>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="Street name, City, State "></center>
+            <label class="Q_label" >Job Title</label>
+             <p class="helper_text">What was the name of your official role?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Store manager, busboy, carpenter"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+  <!--   <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Employer's Telephone Number</label>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="What did you do?"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row"> -->
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >When did you work there? </label>
+             <p class="helper_text">When did you start working there and when did you end?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder=" Ex: November 2014-February 2015"></center>
         </div>
         <div class="col-md-2"></div>
     </div><br>
     <div class="row">
     <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <label class="Q_label" for="exampleInputEmail1">Job Title</label>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="Position"></center>
+            <label class="Q_label" >How Many Hours Worked Per Week</label>
+              <p class="helper_text">On average, how many hours did you work at this job per week?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: 40 hours (standard fror a 9am-5pm job)"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+  <!--   <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Last Salary/Wage</label>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="$/week"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br> -->
+
+<div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Supervisor Name</label>
+            <p class="helper_text">What was your manager’s name?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder=" Ex: Jane Doe"></center>
         </div>
         <div class="col-md-2"></div>
     </div><br>
     <div class="row">
     <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <label class="Q_label" for="exampleInputEmail1">Employer's Telephone Number</label>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="What did you do?"></center>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <label class="Q_label" for="exampleInputEmail1">When were you there?</label>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="Why did you stop?"></center>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <label class="Q_label" for="exampleInputEmail1">Hours Per Week</label>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="How long did you work weekly?"></center>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <label class="Q_label" for="exampleInputEmail1">Last Salary/Wage</label>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="$/week"></center>
+            <label class="Q_label" >Responsibilities</label>
+            <p class="helper_text">What were your day to day duties and tasks?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Cleaned up after guests and staffs, set and reset dining room tables, etc..."></center>
         </div>
         <div class="col-md-2"></div>
     </div><br>
@@ -129,42 +152,336 @@
 <div class="row">
     <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <label class="Q_label" for="exampleInputEmail1">Supervisor</label>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="First Name, Last Name"></center>
+            <label class="Q_label" >Reason for Leaving</label>
+             <p class="helper_text">Why didn’t this job work out?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Scheduling problems"></center>
         </div>
         <div class="col-md-2"></div>
     </div><br>
     <div class="row">
     <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <label class="Q_label" for="exampleInputEmail1">Responsibilities</label>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="what did you do?"></center>
+            <label class="Q_label" >May We Contact the Employer?</label>
+             <p class="helper_text">Is it okay if a potential employer contacts this employer as reference? If so, please provide your supervisor’s email address.</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: janedoe@lowes.com"></center>
         </div>
         <div class="col-md-2"></div>
     </div><br>
-
+    
+</div>
 <div class="row">
-    <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
         <div class="form-group col-md-8">
-            <label class="Q_label" for="exampleInputEmail1">Reasons for Leaving</label>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="why did you stop?"></center>
+            <center>
+                <a id="add_job_button1" class="btn btn-primary btn-success" >Add a Job</a>
+                <a id="min_job_button1" class="btn btn-primary btn-danger" >Delete a Job</a><br><br>
+            </center>
         </div>
         <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <label class="Q_label" for="exampleInputEmail1">May We Contact the Employer?</label>
-            <center><input type="email" class="form-control q_std" id="Q1_input" placeholder="what did you do?"></center>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-
-
-
-     <div class="row">
-    <div class="col-md-2"></div>
     </div>
+
+<!---------------------------------------->
+<div id="employer2">
+<div class="row">
+        <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Employer 2</label> 
+            <p class="helper_text">What was the name of the business or the name of the person you worked for? </p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Lowe’s, Safeway, Jennifer Smith"></center>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    <br>
+
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Address</label>
+             <p class="helper_text">What was the address of the place you worked at?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: 1234 Main Street Palo Alto, CA"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Job Title</label>
+             <p class="helper_text">What was the name of your official role?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Store manager, busboy, carpenter"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >When did you work there? </label>
+             <p class="helper_text">When did you start working there and when did you end?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder=" Ex: November 2014-February 2015"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >How Many Hours Worked Per Week</label>
+              <p class="helper_text">On average, how many hours did you work at this job per week?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: 40 hours (standard fror a 9am-5pm job)"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+
+<div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Supervisor Name</label>
+            <p class="helper_text">What was your manager’s name?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder=" Ex: Jane Doe"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Responsibilities</label>
+            <p class="helper_text">What were your day to day duties and tasks?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Cleaned up after guests and staffs, set and reset dining room tables, etc..."></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+
+<div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Reason for Leaving</label>
+             <p class="helper_text">Why didn’t this job work out?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Scheduling problems"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >May We Contact the Employer?</label>
+             <p class="helper_text">Is it okay if a potential employer contacts this employer as reference? If so, please provide your supervisor’s email address.</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: janedoe@lowes.com"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+</div>
+<div class="row">
+        <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <center>
+                <a id="add_job_button2" class="btn btn-primary btn-success" >Add a Job</a>
+                <a id="min_job_button2" class="btn btn-primary btn-danger" >Delete a Job</a><br><br>
+            </center>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+<!---------->
+<div id="employer3">
+<div class="row">
+        <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Employer 3</label> 
+            <p class="helper_text">What was the name of the business or the name of the person you worked for? </p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Lowe’s, Safeway, Jennifer Smith"></center>
+            </div>
+            <div class="col-md-2"></div>  
+        </div>
+        <br>
+
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Address</label>
+             <p class="helper_text">What was the address of the place you worked at?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: 1234 Main Street Palo Alto, CA"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Job Title</label>
+             <p class="helper_text">What was the name of your official role?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Store manager, busboy, carpenter"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >When did you work there? </label>
+             <p class="helper_text">When did you start working there and when did you end?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder=" Ex: November 2014-February 2015"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >How Many Hours Worked Per Week</label>
+              <p class="helper_text">On average, how many hours did you work at this job per week?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: 40 hours (standard fror a 9am-5pm job)"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+
+<div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Supervisor Name</label>
+            <p class="helper_text">What was your manager’s name?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder=" Ex: Jane Doe"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Responsibilities</label>
+            <p class="helper_text">What were your day to day duties and tasks?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Cleaned up after guests and staffs, set and reset dining room tables, etc..."></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+
+<div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Reason for Leaving</label>
+             <p class="helper_text">Why didn’t this job work out?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Scheduling problems"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >May We Contact the Employer?</label>
+             <p class="helper_text">Is it okay if a potential employer contacts this employer as reference? If so, please provide your supervisor’s email address.</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: janedoe@lowes.com"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+</div>
+<div class="row">
+        <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <center>
+                <a id="add_job_button3" class="btn btn-primary btn-success">Add a Job</a>
+                <a id="min_job_button3" class="btn btn-primary btn-danger">Delete a Job</a><br><br>
+            </center>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+<!-------------->
+<div id="employer4">
+<div class="row">
+        <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Employer 4</label> 
+            <p class="helper_text">What was the name of the business or the name of the person you worked for? </p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Lowe’s, Safeway, Jennifer Smith"></center>
+            </div>
+        <div class="col-md-2"></div>
+        </div><br>
+
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Address</label>
+             <p class="helper_text">What was the address of the place you worked at?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: 1234 Main Street Palo Alto, CA"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Job Title</label>
+             <p class="helper_text">What was the name of your official role?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Store manager, busboy, carpenter"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >When did you work there? </label>
+             <p class="helper_text">When did you start working there and when did you end?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder=" Ex: November 2014-February 2015"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >How Many Hours Worked Per Week</label>
+              <p class="helper_text">On average, how many hours did you work at this job per week?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: 40 hours (standard fror a 9am-5pm job)"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+
+<div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Supervisor Name</label>
+            <p class="helper_text">What was your manager’s name?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder=" Ex: Jane Doe"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Responsibilities</label>
+            <p class="helper_text">What were your day to day duties and tasks?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Cleaned up after guests and staffs, set and reset dining room tables, etc..."></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+
+<div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >Reason for Leaving</label>
+             <p class="helper_text">Why didn’t this job work out?</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: Scheduling problems"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+    <div class="row">
+    <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <label class="Q_label" >May We Contact the Employer?</label>
+             <p class="helper_text">Is it okay if a potential employer contacts this employer as reference? If so, please provide your supervisor’s email address.</p>
+            <center><input  class="form-control q_std" id="Q1_input" placeholder="Ex: janedoe@lowes.com"></center>
+        </div>
+        <div class="col-md-2"></div>
+    </div><br>
+</div>
+<div class="row">
+        <div class="col-md-2"></div>
+        <div class="form-group col-md-8">
+            <center>
+                <a id="add_job_button4" class="btn btn-primary btn-success">Add a Job</a>
+                <a id="min_job_button4" class="btn btn-primary btn-danger">Delete a Job</a><br><br>
+            </center>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    
+
     <div class="row">
         <div class="col-md-2"></div>
         <div class="form-group col-md-8">
@@ -177,3 +494,76 @@
     </div><br>
 
 </body> 
+
+<script>
+$(document).ready(function(){
+    var next = 1;
+    $(".add-more").click(function(e){
+        e.preventDefault();
+        var addto = "#job_field" + next;
+        var addRemove = "#job_field" + (next);
+        next = next + 1;
+        var newIn = '<input autocomplete="off" class="input form-control" id="job_field' + next + '" name="job_field' + next + '" type="text">';
+        var newInput = $(newIn);
+        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-default remove-me" >x</button></div><div id="job_field">';
+        var removeButton = $(removeBtn);
+        $(addto).after(newInput);
+        $(addRemove).after(removeButton);
+        $("#job_field" + next).attr('data-source',$(addto).attr('data-source'));
+        $("#count").val(next);  
+        
+            $('.remove-me').click(function(e){
+                e.preventDefault();
+                var fieldNum = this.id.charAt(this.id.length-1);
+                var fieldID = "#job_field" + fieldNum;
+                $(this).remove();
+                $(fieldID).remove();
+            });
+    });
+    
+    $("#add_job_button1").click(function() {
+      $("#employer1").toggle();
+      $(this).toggle();
+      $('#min_job_button1').toggle();
+      /*$('#min_job_button1').css('display', 'block');*/
+    });
+    $("#min_job_button1").click(function() {
+      $("#employer1").toggle();
+      $(this).toggle();
+      $('#add_job_button1').toggle();
+    });
+    $("#add_job_button2").click(function() {
+      $("#employer2").toggle();
+      $(this).toggle();
+      $('#min_job_button2').toggle();
+    });
+    $("#min_job_button2").click(function() {
+      $("#employer2").toggle();
+      $(this).toggle();
+      $('#add_job_button2').toggle();
+    });
+    $("#add_job_button3").click(function() {
+      $("#employer3").toggle();
+      $(this).toggle();
+      $('#min_job_button3').toggle();
+    });
+    $("#min_job_button3").click(function() {
+      $("#employer3").toggle();
+      $(this).toggle();
+      $('#add_job_button3').toggle();
+    });
+    $("#add_job_button4").click(function() {
+      $("#employer4").toggle();
+      $(this).toggle();
+      $('#min_job_button4').toggle();
+    });
+    $("#min_job_button4").click(function() {
+      $("#employer4").toggle();
+      $(this).toggle();
+      $('#add_job_button4').toggle();
+    });
+    
+
+    
+});
+</script> 
