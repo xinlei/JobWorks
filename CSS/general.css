@@ -2,11 +2,20 @@
     font-family: 'Raleway',sans-serif;
 }
 
+.body {
+    padding: 0px;
+}
+
 #index {
-    /*background-image: url(../IMG/background-light.jpg);*/
+    background-image: url(../IMG/DST_home.png);
     background-repeat: no-repeat;
     background-position: center top;
-    background-color: rgba(0,0,0,0.1); 
+    background-size: cover;
+}
+
+#page_logo {
+    position: absolute;
+    top: -50px;
 }
 
 #main_cont {
@@ -14,8 +23,10 @@
 }
 
 #logo {
-    position: relative;
-    top: -100px;
+    position: absolute;
+    top: 400px;
+    left: -50px; 
+    height: 400px;  
 }
 
 #c_text {
@@ -28,8 +39,9 @@
     position: relative;
     font-family: 'Raleway',sans-serif;
     text-align: center;
-    font-style: italic; 
-    top: -200px;
+    font-style: bold; 
+    font-size: 20px;
+    top: 600px;
 }
 
 #profile_img {
@@ -40,7 +52,7 @@
 
 #start_button {
     position: relative;
-    top: -150px;
+    top: 600px;
 }
 
 #description_txt {
