@@ -6,6 +6,25 @@
     padding: 0px;
 }
 
+#title_text {
+    color: white;
+    font-size: 50px;
+    font-weight: 30px;
+    position: relative;
+    top: 340px;
+    left: 40px; 
+     //text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;   
+}
+
+#title_spec {
+    color: #89c389;
+    position: relative;
+    top: 315px;
+    left: 110px;
+    font-size: 50px;
+    //text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    
+}
+
 #index {
     background-image: url(../IMG/DST_home.png);
     background-repeat: no-repeat;
@@ -52,7 +71,8 @@
 
 #start_button {
     position: relative;
-    top: 600px;
+    top: 250px;
+    width: 200px;
 }
 
 #description_txt {
@@ -85,6 +105,8 @@
     position: relative;
     left: 175px;
     font-family: 'Raleway',sans-serif;
+    font-size: 16px;
+    font-style: italic;
 }
 
 #progress_holder {
