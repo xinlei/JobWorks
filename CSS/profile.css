@@ -45,6 +45,8 @@
 }
 
 .skills td {
+	border-left: 1px solid white;
+	border-right: 1px solid white;
 	font-size: 20px;
 	text-align: center;
 	width: 120px;
@@ -80,4 +82,8 @@ h5 {
 
 .button {
 	padding-top: 10px;
+}
+
+.story {
+	font-size: 18px;
 }
