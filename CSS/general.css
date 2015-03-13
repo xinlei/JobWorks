@@ -92,7 +92,7 @@
 }
 
 .option_button {
-    width: 110px;
+    width: 115px;
     font-family: 'Raleway',sans-serif;
 }
 
@@ -208,7 +208,7 @@
 }
 
 .story_helper_text {
-    font-size: 12px;
+    font-size: 16px;
     font-style: italic;
     position: relative;
 }
@@ -300,3 +300,22 @@
     background-size: cover;
 }
 */
+
+.cat_caret {
+    position: relative;
+    left: 3px;
+    top: -5px;
+}
+
+#tree_progress_img {
+    position: relative;
+    top: -40px;
+    height: 90px;
+    width: 100%;
+}
+
+.madlib {
+    display: inline;
+    color: green;
+    font-family: 'Architects Daughter', cursive;
+}
