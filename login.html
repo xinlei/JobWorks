@@ -8,14 +8,14 @@
     <link rel="stylesheet" type="text/css" href="CSS/general.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
@@ -25,16 +25,16 @@
         <form id="login-form">
           <h2>Log In</h2>
           <div class="error" style="display:none"></div>
-          <input type="text" id="login-username" placeholder="Username" />
-          <input type="password" id="login-password" placeholder="Password" />
+          <input type="text" class="form-control" id="login-username" placeholder="Username" />
+          <input type="password" class="form-control" id="login-password" placeholder="Password" />
           <button>Log In</button>
         </form>
 
         <form id="signup-form">
           <h2>Sign Up</h2>
           <div class="error" style="display:none"></div>
-          <input type="text" id="signup-username" placeholder="Username" />
-          <input type="password" id="signup-password" placeholder="Create a Password" />
+          <input type="text" class="form-control" id="signup-username" placeholder="Username" />
+          <input type="password" class="form-control" id="signup-password" placeholder="Create a Password" />
           <button>Sign Up</button>
         </form>
     </div>
@@ -47,11 +47,11 @@
 
 			Parse.User.logIn(username, password, {
 		  		success: function(user) {
-		    		alert("success");
+		    		alert("Successful Login!");
 		    		window.location.href = "P1.html";
 		  		},
 		  		error: function(user, error) {
-		    		alert("failure");
+		    		alert("Check your username and");
 		  		}
 			});
 			event.preventDefault();
@@ -69,6 +69,7 @@
 			user.signUp(null, {
 			  	success: function(user) {
 			    	alert("success");
+			    	window.location.href = "P1.html";
 			  	},
 			  	error: function(user, error) {
 			    	alert("failure");
