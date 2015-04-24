@@ -11,7 +11,7 @@
         }
     });
     $('#next_button').click(function() {
-        var f_name = $('#f_name').value();
+        var interests = $('#f_name').value();
         var l_name = $('#l_name').value();
         var email = $('#email').value();
         var phone = $('#phone').value();

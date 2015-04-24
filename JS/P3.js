@@ -11,15 +11,9 @@
         }
     });
     $('#next_button').click(function() {
-        var f_name = $('#f_name').value();
-        var l_name = $('#l_name').value();
-        var email = $('#email').value();
-        var phone = $('#phone').value();
-        var ssn = $('#ssn').value();
-        currentUser.set('f_name',f_name);
-        currentUser.set('l_name',l_name);
-        currentUser.set('email',email);
-        currentUser.set('phone',phone);
-        currentUser.set('ssn',ssn);
+        var start = $('#start').value();
+        var hours = $('#hours').value();
+        currentUser.set('start',start);
+        currentUser.set('hours',hours); 
     });
 </script>

@@ -11,15 +11,12 @@
         }
     });
     $('#next_button').click(function() {
-        var f_name = $('#f_name').value();
-        var l_name = $('#l_name').value();
-        var email = $('#email').value();
-        var phone = $('#phone').value();
-        var ssn = $('#ssn').value();
-        currentUser.set('f_name',f_name);
-        currentUser.set('l_name',l_name);
-        currentUser.set('email',email);
-        currentUser.set('phone',phone);
-        currentUser.set('ssn',ssn);
+        var edu = $('#edu').value();
+        var lang = $('#lang').value();
+        var vet = $('#vet').value();
+        //placeholder form crim
+        currentUser.set('edu',edu);
+        currentUser.set('lang',lang);
+        currentUser.set('vet',vet);
     });
 </script>
