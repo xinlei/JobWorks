@@ -8,4 +8,17 @@ $('document').ready(function() {
         // show the login page if not logged in
         window.location.href = "login.html";
     }
+
+    $("#submitSearch").click(function() { 
+        alert("Go");
+    });
+
+     $("#submitShowAdvancedSearch").click(function() { 
+        alert("Advanced");
+    });
+});
+
+$("#query-form input[type=submit]").click(function() {
+    $("input[type=submit]", $(this).parents("#query-form")).removeAttr("clicked");
+    $(this).attr("clicked", "true");
 });

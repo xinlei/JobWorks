@@ -11,18 +11,17 @@ $('document').ready(function() {
 });
 
 $( '#next_button' ).click(function() {
-    alert('test');
     //console.log(currentUser);
     var f_name = $('#f_name').val();
     var l_name = $('#l_name').val();
-    var email = $('#email').val();
+    //var email = $('#email').val();
     //var phone = $('#phone').val();
     //var ssn = $('#ssn').val();
 
     var currentUser = Parse.User.current();
     currentUser.set('f_name', f_name);
     currentUser.set('l_name', l_name);
-    currentUser.set('email', email);
+    //currentUser.set('email', email);
     //currentUser.set('phone', phone);
     //currentUser.set('ssn', ssn);
 
