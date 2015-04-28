@@ -19,8 +19,8 @@ $( '#next_button' ).click(function() {
     //var ssn = $('#ssn').val();
 
     var currentUser = Parse.User.current();
-    currentUser.set('f_name', f_name);
-    currentUser.set('l_name', l_name);
+    if(f_name) currentUser.set('f_name', f_name);
+    if(l_name) currentUser.set('l_name', l_name);
     //currentUser.set('email', email);
     //currentUser.set('phone', phone);
     //currentUser.set('ssn', ssn);

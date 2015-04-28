@@ -9,17 +9,17 @@ $('document').ready(function() {
         window.location.href = "login.html";
     }
 
-    $("#submitSearch").click(function() { 
+    $("#submit-search").click(function() { 
         var query = new Parse.Query(Parse.User);
 
-        if($("#query_firstname").val()){
-            query.equalTo("f_name", $("#query_firstname").val());
+        if($("#query-firstname").val()){
+            query.equalTo("f_name", $("#query-firstname").val());
         }
-        if($("#query_lastname").val()){
-            query.equalTo("l_name", $("#query_lastname").val());
+        if($("#query-lastname").val()){
+            query.equalTo("l_name", $("#query-lastname").val());
         }
-        if($("#query_email").val()){
-            query.equalTo("l_name", $("#query_email").val());
+        if($("#query-email").val()){
+            query.equalTo("l_name", $("#query-email").val());
         }
         query.find({
             success: function(results){
@@ -34,7 +34,7 @@ $('document').ready(function() {
         }); 
     });
 
-     $("#submitShowAdvancedSearch").click(function() { 
+     $("#submit-advanced").click(function() { 
         alert("Advanced");
     });
 });

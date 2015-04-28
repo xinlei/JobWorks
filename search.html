@@ -27,33 +27,65 @@
   <body>
     <form class="form-horizontal" id="query-form">
   <div class="form-group">
-    <label for="query_firstname" class="col-sm-2 control-label">First Name</label>
+    <label for="query-firstname" class="col-sm-2 control-label">First Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="query_firstname" placeholder="First">
+      <input type="text" class="form-control" id="query-firstname" placeholder="First">
     </div>
   </div>
   <div class="form-group">
-    <label for="query_lastname" class="col-sm-2 control-label">Last Name</label>
+    <label for="query-lastname" class="col-sm-2 control-label">Last Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="query_lastname" placeholder="Last">
+      <input type="text" class="form-control" id="query-lastname" placeholder="Last">
     </div>
   </div>
 
   <div class="form-group">
-    <label for="query_email" class="col-sm-2 control-label">Email</label>
+    <label for="query-email" class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="query_email" placeholder="Example: johnsmith@gmail.com">
+      <input type="text" class="form-control" id="query-email" placeholder="Example: johnsmith@gmail.com">
     </div>
   </div>
   <form class="form-horizontal">
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <input type="submit" id="submitSearch" name="search_button" class="btn btn-default" value="Go!">
-      <input type="submit" id="submitShowAdvancedSearch" name="delete_button" class="btn btn-default" value="Advanced Search">
+      <input type="submit" id="submit-search" name="search_button" class="btn btn-default" value="Go!">
+      <input type="submit" id="show-advanced" name="delete_button" class="btn btn-default" value="Show Advanced Search Option">
     </div>
   </div>
 </div>
 </form>
+
+
+<div id="query-form-advanced">
+      <form class="form-horizontal" id="query-form">
+  <div class="form-group">
+    <label for="query-firstname" class="col-sm-2 control-label">First Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="query-firstname" placeholder="First">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="query-lastname" class="col-sm-2 control-label">Last Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="query-lastname" placeholder="Last">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="query-email" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="query-email" placeholder="Example: johnsmith@gmail.com">
+    </div>
+  </div>
+  <form class="form-horizontal">
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" id="submit-advanced" name="delete_button" class="btn btn-default" value="Advanced Search">
+    </div>
+  </div>
+</div>
+</form>
+</div>
 <!-- Parse query results here -->
 <div id="query-results">
 
