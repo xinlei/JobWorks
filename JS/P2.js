@@ -9,8 +9,9 @@ $('document').ready(function() {
         window.location.href = "login.html";
     }
 });
+//Temporarily nulled
 $('#next_button').click(function() {
-    var Employer = Parse.Object.extend("Employer");
+    /*var Employer = Parse.Object.extend("Employer");
     //first employer
     var employer1 = new Employer();
     var emp1 = $('#emp1').value();
@@ -95,6 +96,6 @@ $('#next_button').click(function() {
     currentUser.set('exp1', exp1);
     currentUser.set('exp2', exp2);
     currentUser.set('exp3', exp3);
-    currentUser.set('exp4', exp4);
+    currentUser.set('exp4', exp4);*/
     
 });

@@ -7,13 +7,22 @@ $('document').ready(function() {
         // show the login page if not logged in
         window.location.href = "login.html";
     }
-});
-$('#next_button').click(function() {
-    var edu = $('#edu').value();
-    var lang = $('#lang').value();
-    var vet = $('#vet').value();
-    //placeholder form crim
-    currentUser.set('edu',edu);
-    currentUser.set('lang',lang);
-    currentUser.set('vet',vet);
+    $('#next_button').click(function() {
+        event.preventDefault();
+        var edu = $('#edu').val();
+        var lang = $('#lang').val();
+        var vet = $('#vet').val();
+        //placeholder form crim
+        currentUser.set('edu',edu);
+        currentUser.set('lang',lang);
+        currentUser.set('vet',vet);
+        currentUser.save(null, {
+            success: function(currentUser) {
+                alert('currentUser values updated');
+            },
+            error: function(currentUser, error) {
+                alert('currentUser values failed to update, with error code: ' + error.message);
+            }
+        })
+    });
 });
