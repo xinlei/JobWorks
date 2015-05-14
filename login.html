@@ -5,17 +5,20 @@
 
 <head>
     <title>JobWorks</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="CSS/general.css">
+
+    <link rel="stylesheet" type="text/css" href="CSS/login.css">
+
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
     <script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
@@ -27,7 +30,7 @@
           <div class="error" style="display:none"></div>
           <input type="text" class="form-control" id="login-username" placeholder="Username" />
           <input type="password" class="form-control" id="login-password" placeholder="Password" />
-          <button>Log In</button>
+          <button class="btn btn-primary btn-lg">Log In</button>
         </form>
 
         <form id="signup-form">
@@ -35,11 +38,17 @@
           <div class="error" style="display:none"></div>
           <input type="text" class="form-control" id="signup-username" placeholder="Username" />
           <input type="password" class="form-control" id="signup-password" placeholder="Create a Password" />
-          <button>Sign Up</button>
+          <input type="password" class="form-control" id="signup-password-confirm" placeholder="Confirm Password" />
+          <button class="btn btn-primary btn-lg">Sign Up</button>
         </form>
     </div>
     <script>
     	Parse.initialize("O2zmBbmKr3hO6JJC0o5CxswEsEUxwIGpvviyYjsc", "Xexg4iA4TwdMu4hy6RNrbgrFEkLRTwMjmhplMGya");
+
+    	var currentUser = Parse.User.current();
+    	if(currentUser) {
+    		//window.location.href = "login.html";
+    	}
 
     	$("#login-form").submit(function(event) {
 			var username = $("#login-username").val();
@@ -47,11 +56,10 @@
 
 			Parse.User.logIn(username, password, {
 		  		success: function(user) {
-		    		alert("Successful Login!");
 		    		window.location.href = "P1.html";
 		  		},
 		  		error: function(user, error) {
-		    		alert("Check your username and");
+		    		alert("Oops! Double check your username and password.");
 		  		}
 			});
 			event.preventDefault();
@@ -62,19 +70,25 @@
 			var user = new Parse.User();
 			var username = $("#signup-username").val();
 		    var password = $("#signup-password").val();
+		    var confirmation = $("signup-password-confirm").val();
 		    
 			user.set("username", username);
 			user.set("password", password);
-			 
-			user.signUp(null, {
-			  	success: function(user) {
-			    	alert("success");
-			    	window.location.href = "P1.html";
-			  	},
-			  	error: function(user, error) {
-			    	alert("failure");
-			  	}
-			});
+
+			if(password != confirmation){
+				alert("passwords do not match");
+				
+			} else {
+				user.signUp(null, {
+				  	success: function(user) {
+				    	alert("success");
+				    	window.location.href = "P1.html";
+				  	},
+				  	error: function(user, error) {
+				    	alert(error.message);
+				  	}
+				});
+			}
 			event.preventDefault();
 		});
     </script>

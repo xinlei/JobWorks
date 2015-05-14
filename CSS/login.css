@@ -1,0 +1,11 @@
+.login {
+	width: 600px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+}
+
+#login-username, #login-password, #signup-username, #signup-password, #signup-password-confirm {
+	height: 34px;
+}
