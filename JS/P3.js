@@ -17,6 +17,7 @@ $('document').ready(function() {
         currentUser.save(null, {
             success: function(currentUser) {
                 alert('currentUser values updated');
+                window.location.href = "P4.html"; 
             },
             error: function(currentUser, error) {
                 alert('currentUser values failed to update, with error code: ' + error.message);
