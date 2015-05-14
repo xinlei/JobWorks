@@ -9,17 +9,22 @@ $('document').ready(function() {
         window.location.href = "login.html";
     }
 
-    $("#submit-search").click(function() { 
+    $("#submit-search").click(function() {
+        
+        event.preventDefault();
+
+        Parse.initialize("O2zmBbmKr3hO6JJC0o5CxswEsEUxwIGpvviyYjsc", "Xexg4iA4TwdMu4hy6RNrbgrFEkLRTwMjmhplMGya"); 
+        
         var query = new Parse.Query(Parse.User);
 
         if($("#query-firstname").val()){
-            query.equalTo("f_name", $("#query-firstname").val());
+            query.startsWith("f_name", $("#query-firstname").val());
         }
         if($("#query-lastname").val()){
-            query.equalTo("l_name", $("#query-lastname").val());
+            query.startsWith("l_name", $("#query-lastname").val());
         }
         if($("#query-email").val()){
-            query.equalTo("l_name", $("#query-email").val());
+            query.startsWith("email", $("#query-email").val());
         }
         query.find({
             success: function(results){
