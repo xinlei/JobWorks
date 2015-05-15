@@ -3,6 +3,11 @@ Parse.initialize("O2zmBbmKr3hO6JJC0o5CxswEsEUxwIGpvviyYjsc", "Xexg4iA4TwdMu4hy6R
 $('document').ready(function() {
     var currentUser = Parse.User.current();
     if (currentUser) {
+        var e_start = currentUser.get("start");
+        var e_hours = currentUser.get("hours");
+
+        if(e_start) $('#start').val(e_start);
+        if(e_hours) $('#hours').val(e_hours);
         
     } else {
         // show the login page if not logged in

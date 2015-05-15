@@ -47,9 +47,8 @@
 
     	var currentUser = Parse.User.current();
     	if(currentUser) {
-    		//window.location.href = "login.html";
+    		Parse.User.logOut();
     	}
-
     	$("#login-form").submit(function(event) {
 			var username = $("#login-username").val();
 		    var password = $("#login-password").val();
