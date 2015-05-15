@@ -16,7 +16,11 @@ $('document').ready(function() {
         var h_year = $('#h_year').val();
         var r_homeless = $('#r_homeless').val();
         var d_year = $('#d_year').val();
-        //placeholder for traits
+        var traits = [];
+        $('.trait').each(function() {
+            var trait = $(this).val();
+            if(trait) traits.push(trait);
+        });
         var characteristic = $('#characteristic').val();
         var d_characteristic = $('#d_characteristic').val();
         var u_circum = $('#u_circum').val();
@@ -30,6 +34,7 @@ $('document').ready(function() {
         currentUser.set('u_circum',u_circum);
         currentUser.set('d_job',d_job);
         currentUser.set('goals',goals);
+        currentUser.set('traits',traits);
         currentUser.save(null, {
             success: function(currentUser) {
                 alert('currentUser values updated');
@@ -40,5 +45,6 @@ $('document').ready(function() {
             }
         })
     });
+    
 });
 

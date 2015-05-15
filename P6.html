@@ -178,7 +178,7 @@ In my last job, I was a <p class='madlib'>store clerk </p>at<p class='madlib'> L
                             <label class="control-label" for="field1">Traits</label>
                             <div class="controls" id="profs"> 
                                 <form class="input-append" id="appends">
-                                    <div id="field"><input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Trait" data-items="8"/><button id="b1" class="btn btn-success add-more" type="button">+</button></div>
+                                    <div id="field"><input autocomplete="off" class="input form-control trait" id="field1" name="prof1" type="text" placeholder="Trait" data-items="8"/><button id="b1" class="btn btn-success add-more" type="button">+</button></div>
                                 </form>
                             <br>
                             <small>Press + to add another form field :)</small>
@@ -342,7 +342,7 @@ $(document).ready(function(){
         var addto = "#field" + next;
         var addRemove = "#field" + (next);
         next = next + 1;
-        var newIn = '<input autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text">';
+        var newIn = '<input autocomplete="off" class="input form-control trait" id="field' + next + '" name="field' + next + '" type="text">';
         var newInput = $(newIn);
         var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-default remove-me" >x</button></div><div id="field">';
         var removeButton = $(removeBtn);
@@ -359,8 +359,5 @@ $(document).ready(function(){
                 $(fieldID).remove();
             });
     });
-    
-
-    
 });
 </script>
