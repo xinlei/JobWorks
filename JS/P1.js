@@ -4,6 +4,7 @@ $('document').ready(function() {
     if (currentUser) {
         var e_f_name = currentUser.get("f_name");
         var e_l_name = currentUser.get("l_name");
+        var hometown = currentUser.get("hometown");
         var e_email = currentUser.get("email");
         var e_phone = currentUser.get("phone");
         var e_ssn = currentUser.get("ssn");
@@ -24,12 +25,14 @@ $('document').ready(function() {
 
         var f_name = $('#f_name').val();
         var l_name = $('#l_name').val();
+        var hometown = $('#hometown').val();
         var email = $('#email').val();
         var phone = $('#phone').val();
         var ssn = $('#ssn').val();
 
         currentUser.set('f_name', f_name);
         currentUser.set('l_name', l_name);
+        currentUser.set('hometown', hometown);
         currentUser.set('email', email);
         currentUser.set('phone', phone);
         currentUser.set('ssn', ssn);

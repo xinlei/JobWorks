@@ -8,6 +8,57 @@ $('document').ready(function() {
         // show the login page if not logged in
         window.location.href = "login.html";
     }
+
+
+    //Get initial value for the paragraph intro
+    var f_name = currentUser.get("f_name");
+    var hometown = currentUser.get("hometown");
+    var edu = currentUser.get("edu");
+    var industry_interests = "";
+    var category_interests = "";
+    var start = currentUser.get("start");
+
+    //add industry and category interests
+    var industry_list = [];
+    var construction = currentUser.get('construction');
+    var office = currentUser.get('office');
+    var warehouse = currentUser.get('warehouse');
+    var sales = currentUser.get('sales');
+    var automotive = currentUser.get('automotive');
+    var caregiving = currentUser.get('caregiving');
+    var culinary = currentUser.get('culinary');
+    var financial = currentUser.get('financial');
+    if (construction.length > 0) {
+        industry_interests += "construction";
+    }
+    if (office.length > 0) {
+        industry_interests += ", office";
+    }
+    if (warehouse.length > 0) {
+        industry_interests += ", warehouse";
+    }
+    if (sales.length > 0) {
+        industry_interests += "sales";
+    }
+    if (automotive.length > 0) {
+        industry_interests += "automotive";
+    }
+    if (caregiving.length > 0) {
+        industry_interests += "caregiving";
+    }
+    if (culinary.length > 0) {
+        industry_interests += "culinary";
+    }
+    if (financial.length > 0) {
+        industry_interests += "financial";
+    }
+
+
+    //Set values for the paragraph intro
+
+
+
+
     $('#save_button').click(function() {
         window.location.href = "Profile_Skeleton.html";
     });

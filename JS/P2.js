@@ -11,8 +11,12 @@ $('document').ready(function() {
 });
 //Temporarily nulled
 $('#next_button').click(function() {
-    /*var Employer = Parse.Object.extend("Employer");
+    var Employer = Parse.Object.extend("Employer");
     //first employer
+    /*
+        Query current user for employers
+        Display Employers and give option to edit
+    */
     var employer1 = new Employer();
     var emp1 = $('#emp1').value();
     var addr1 = $('#addr1').value();
@@ -33,7 +37,7 @@ $('#next_button').click(function() {
     employer1.set('r_leave',r_leave1);
     employer1.set('contact_emp',contact_emp1);
     //second employer
-    var employer2 = new Employer();
+    /*var employer2 = new Employer();
     var emp2 = $('#emp2').value();
     var addr2 = $('#addr2').value();
     var title2 = $('#title2').value();
@@ -97,5 +101,13 @@ $('#next_button').click(function() {
     currentUser.set('exp2', exp2);
     currentUser.set('exp3', exp3);
     currentUser.set('exp4', exp4);*/
+    employer1.save(null, {
+        success: function(currentUser) {
+            alert('currentUser values updated');
+        },
+        error: function(currentUser, error) {
+            alert('currentUser values failed to update, with error code: ' + error.message);
+        }
+    })
     
 });
