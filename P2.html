@@ -198,7 +198,6 @@
         <div class="col-md-2"></div>
     </div>
 
-<!---------------------------------------->
 <div id="employer2">
 <div class="row">
         <div class="col-md-2"></div>
@@ -298,7 +297,6 @@
         <div class="col-md-2"></div>
     </div>
 
-<!---------->
 <div id="employer3">
 <div class="row">
         <div class="col-md-2"></div>
@@ -397,7 +395,6 @@
         </div>
         <div class="col-md-2"></div>
     </div>
-<!-------------->
 <div id="employer4">
 <div class="row">
         <div class="col-md-2"></div>
@@ -508,75 +505,4 @@
     </div><br>
     <script src="JS/main.js"></script>
 </body> 
-
-<script>
-$(document).ready(function(){
-    var next = 1;
-    $(".add-more").click(function(e){
-        e.preventDefault();
-        var addto = "#job_field" + next;
-        var addRemove = "#job_field" + (next);
-        next = next + 1;
-        var newIn = '<input autocomplete="off" class="input form-control" id="job_field' + next + '" name="job_field' + next + '" type="text">';
-        var newInput = $(newIn);
-        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-default remove-me" >x</button></div><div id="job_field">';
-        var removeButton = $(removeBtn);
-        $(addto).after(newInput);
-        $(addRemove).after(removeButton);
-        $("#job_field" + next).attr('data-source',$(addto).attr('data-source'));
-        $("#count").val(next);  
-        
-            $('.remove-me').click(function(e){
-                e.preventDefault();
-                var fieldNum = this.id.charAt(this.id.length-1);
-                var fieldID = "#job_field" + fieldNum;
-                $(this).remove();
-                $(fieldID).remove();
-            });
-    });
-    
-    $("#add_job_button1").click(function() {
-      $("#employer1").toggle();
-      $(this).toggle();
-      $('#min_job_button1').toggle();
-    });
-    $("#min_job_button1").click(function() {
-      $("#employer1").toggle();
-      $(this).toggle();
-      $('#add_job_button1').toggle();
-    });
-    $("#add_job_button2").click(function() {
-      $("#employer2").toggle();
-      $(this).toggle();
-      $('#min_job_button2').toggle();
-    });
-    $("#min_job_button2").click(function() {
-      $("#employer2").toggle();
-      $(this).toggle();
-      $('#add_job_button2').toggle();
-    });
-    $("#add_job_button3").click(function() {
-      $("#employer3").toggle();
-      $(this).toggle();
-      $('#min_job_button3').toggle();
-    });
-    $("#min_job_button3").click(function() {
-      $("#employer3").toggle();
-      $(this).toggle();
-      $('#add_job_button3').toggle();
-    });
-    $("#add_job_button4").click(function() {
-      $("#employer4").toggle();
-      $(this).toggle();
-      $('#min_job_button4').toggle();
-    });
-    $("#min_job_button4").click(function() {
-      $("#employer4").toggle();
-      $(this).toggle();
-      $('#add_job_button4').toggle();
-    });
-    
-
-    
-});
-</script> 
+</html>
