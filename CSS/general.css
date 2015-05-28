@@ -6,6 +6,10 @@
     padding: 0px;
 }
 
+.Q_label:hover, .area_label:hover {
+    cursor: default;
+}
+
 #title_text {
     color: white;
     font-size: 50px;
