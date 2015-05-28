@@ -41,40 +41,40 @@ $('document').ready(function() {
     var culinary = currentUser.get('culinary');
     var financial = currentUser.get('financial');
     var counter = 0;
-    if (construction.length > 0) {
+    if (construction && construction.length > 0) {
         industry_interests += "construction";
         counter++;
     }
-    if (office.length > 0) {
+    if (office && office.length > 0) {
         industry_interests += ", office";
         counter++;
     }
-    if (warehouse.length > 0) {
+    if (warehouse && warehouse.length > 0) {
         industry_interests += ", warehouse";
         counter++;
 
     }
-    if (sales.length > 0) {
+    if (sales && sales.length > 0) {
         industry_interests += ", sales";
         counter++;
 
     }
-    if (automotive.length > 0) {
+    if (automotive && automotive.length > 0) {
         industry_interests += ", automotive";
         counter++;
 
     }
-    if (caregiving.length > 0) {
+    if (caregiving && caregiving.length > 0) {
         industry_interests += ", caregiving";
         counter++;
 
     }
-    if (culinary.length > 0) {
+    if (culinary && culinary.length > 0) {
         industry_interests += ", culinary";
         counter++;
 
     }
-    if (financial.length > 0) {
+    if (financial && financial.length > 0) {
         industry_interests += ", financial";
         counter++;
 
@@ -104,6 +104,8 @@ $('document').ready(function() {
     $('#edu').html(edu);
     $('#industry_interests').html(industry_string);
     $('#start').html(start);
+
+    console.log(f_name);
 
 
 
