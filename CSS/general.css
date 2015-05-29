@@ -101,13 +101,13 @@
     font-size: 20px;
     text-align: center;
     position: relative;
-    left: 175px;
+    left: 0px;
     font-family: 'Raleway',sans-serif;
 }
 
 .helper_text {
     position: relative;
-    left: 175px;
+    left: 0px;
     font-family: 'Raleway',sans-serif;
     font-size: 16px;
     font-style: italic;
