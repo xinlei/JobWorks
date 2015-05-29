@@ -57,6 +57,8 @@ function loadEmployers(currentUser, employers, toggle){
                 }
                 
             }
+            addEditButton();
+            editTextField(); 
         },
         error: function(error) {
             alert("Error: " + error.code + " " + error.message);
