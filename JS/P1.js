@@ -23,6 +23,15 @@ $('document').ready(function() {
     $('#next_button').click(function() {
         event.preventDefault();
 
+        //Form Validation
+        $("#email_form").validate({
+            rules: {
+                field: {
+                    email: true
+                }
+            }
+        });
+
         var f_name = $('#f_name').val();
         var l_name = $('#l_name').val();
         var hometown = $('#hometown').val();
