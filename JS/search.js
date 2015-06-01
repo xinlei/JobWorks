@@ -11,6 +11,7 @@ $('document').ready(function() {
     }
 
     var sidebarClone = $(".sidebar").clone(); 
+    var mainClone = $('.main').clone();
 
     $("#submit-search").click(function() {
         
@@ -54,8 +55,6 @@ $('document').ready(function() {
             event.preventDefault();
             var query = new Parse.Query(Parse.User);
 
-            console.log($("#query-basic").val());
-
             if($("#query-basic").val()){
                 query.startsWith("f_name", $("#query-basic").val());
             }
@@ -66,10 +65,10 @@ $('document').ready(function() {
                     $('.sidebar').replaceWith(sidebarClone.clone(true));
 
                     for(var i = 0; i < results.length; i++){
-                        var row = $("<div>", {id: results[i].id, class: "row result"});
+                        var row = $("<div>", {class: "row result"});
                         var div = $("<div>", {class: "col-md-10 result"});
                         
-                        div.append('<p class="open-profile"><a>'+results[i].get("f_name")+' '+results[i].get("l_name")+'</a></p>')
+                        div.append('<p><a id='+results[i].id+' class="open-profile">'+results[i].get("f_name")+' '+results[i].get("l_name")+'</a></p>')
                         
                         row.append('<div class="col-md-1 result">');
                         row.append(div);
@@ -86,5 +85,18 @@ $('document').ready(function() {
         }
     });
 
-    $(document.body).on('click')
+    $(document.body).on('click', '.open-profile', function(){
+        $('.main').replaceWith(mainClone.clone(true));
+        var query = new Parse.Query(Parse.User);
+        var id = $(this).attr('id');
+        
+        query.get(id, {
+          success: function(object) {
+            $('.name').append('<h1>'+object.get('f_name')+' '+object.get('l_name')+'</h1>');
+            $('.contact').append('<p>'+object.get('email')+' | '+object.get('phone')+'</p>');
+          },
+          error: function(object, error) {
+          }
+        });
+    });
 });
