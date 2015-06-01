@@ -22,6 +22,10 @@ $('document').ready(function() {
         // show the login page if not logged in
         window.location.href = "login.html";
     }
+
+    //mask fields
+    $('#start').mask("00/00/0000", {placeholder: "__/__/____"});
+
     $('#next_button').click(function() {
         event.preventDefault();
         var start = $('#start').val();

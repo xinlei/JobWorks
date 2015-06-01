@@ -31,6 +31,8 @@
     <!-- Validation -->
     <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
     <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+    <!--Masks-->
+    <script src="JS/jquery.mask.min.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
@@ -94,74 +96,73 @@
         <div class="col-md-8"><p id="description_txt">Let's start with the basics!</p></div>
         <div class="col-md-2"></div>
     </div><br><br>
-
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <label class="Q_label" >What's your name?</label>
-            <p class="helper_text">It's a pleasure to meet you!</p>
-            <center><input  class="form-control q_std" id="f_name" placeholder="First name"></center><br>
-            <center><input  class="form-control q_std" id="l_name" placeholder="Last name"></center>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <label class="Q_label" >Where are you originally from?</label>
-            <p class="helper_text">City, State</p>
-            <center><input  class="form-control q_std" id="hometown" placeholder="City, State"></center><br>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <form id="email_form">
-                <label class="Q_label" >What's your email address?</label>
-                <p class="helper_text">Do not use an email address with unprofessional names, numbers. <br>Try to use an email address ending in @gmail or @yahoo. </p>
-                <center><input  class="form-control q_std" id="email" placeholder="Example: johnsmith@gmail.com"></center>
-            </form>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <label class="Q_label" >What's a phone number we can reach you at?</label>
-            <p class="helper_text">Make sure you have a professional voicemail (record your name, use the default, etc.)</p>
-            <center><input  class="form-control q_std" id="phone" placeholder="(xxx) xxx - xxxx"></center>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <label class="Q_label" >Social Security Number</label>
-            <p class="helper_text">We promise to keep your personal information safe!</p>
-            <center><input  class="form-control q_std" id="ssn" placeholder="XXX-XX-XXXX"></center>
-        </div>
-        <div class="col-md-2"></div>
-    </div><br>
-     <div class="row">
-    <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-                <label class="Q_label" >Let's see a photo!</label>
+    <form id="P1_form">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="form-group col-md-8">
+                <label class="Q_label" >What's your name?</label>
                 <p class="helper_text">It's a pleasure to meet you!</p>
-                <a id="upload_button" class="btn btn-lg Q_label" href="#">Upload Photo</a>
-        </div>
+                <center><input  class="form-control q_std" id="f_name" placeholder="First name"></center><br>
+                <center><input  class="form-control q_std" id="l_name" placeholder="Last name"></center>
+            </div>
+            <div class="col-md-2"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="form-group col-md-8">
+                        <label class="Q_label" >Where are you originally from?</label>
+                        <p class="helper_text">City, State</p>
+                        <center><input class="form-control q_std" id="hometown" placeholder="City, State" required></center><br>
+            </div>
+            <div class="col-md-2"></div>
+        </div><br>
+        <div class="row">
         <div class="col-md-2"></div>
-    </div><br>
-    <div class="row">
+            <div class="form-group col-md-8">
+                    <label class="Q_label" >What's your email address?</label>
+                    <p class="helper_text">Do not use an email address with unprofessional names, numbers. <br>Try to use an email address ending in @gmail or @yahoo. </p>
+                    <center><input class="form-control q_std" id="email" placeholder="Example: johnsmith@gmail.com"></center>
+            </div>
+            <div class="col-md-2"></div>
+        </div><br>
+        <div class="row">
         <div class="col-md-2"></div>
-        <div class="form-group col-md-8">
-            <center>
-                <a id="back_button" class="btn btn-primary btn-warning btn-lg" href="index.html">BACK</a>    
-                <a id="next_button" class="btn btn-primary btn-lg" href="P2.html">NEXT</a>  
-            </center>
-        </div>
+            <div class="form-group col-md-8">
+                <label class="Q_label" >What's a phone number we can reach you at?</label>
+                <p class="helper_text">Make sure you have a professional voicemail (record your name, use the default, etc.)</p>
+                <center><input  class="form-control q_std" id="phone" placeholder="(xxx) xxx - xxxx"></center>
+            </div>
+            <div class="col-md-2"></div>
+        </div><br>
+        <div class="row">
         <div class="col-md-2"></div>
-    </div><br>
+            <div class="form-group col-md-8">
+                <label class="Q_label" >Social Security Number</label>
+                <p class="helper_text">We promise to keep your personal information safe!</p>
+                <center><input  class="form-control q_std" id="ssn" placeholder="XXX-XX-XXXX"></center>
+            </div>
+            <div class="col-md-2"></div>
+        </div><br>
+         <div class="row">
+        <div class="col-md-2"></div>
+            <div class="form-group col-md-8">
+                    <label class="Q_label" >Let's see a photo!</label>
+                    <p class="helper_text">It's a pleasure to meet you!</p>
+                    <a id="upload_button" class="btn btn-lg Q_label" href="#">Upload Photo</a>
+            </div>
+            <div class="col-md-2"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="form-group col-md-8">
+                <center>
+                    <a id="back_button" class="btn btn-primary btn-warning btn-lg" href="index.html">BACK</a>    
+                    <input id="next_button" type="submit" class="submit btn btn-primary btn-lg" href="P2.html" value="NEXT"> 
+                </center>
+            </div>
+            <div class="col-md-2"></div>
+        </div><br>
+    </form>
     <!--Specific js file for P1-->
     <script src="JS/P1.js"></script>
     <script src="JS/main.js"></script>

@@ -4,13 +4,15 @@ $('document').ready(function() {
     if (currentUser) {
         var e_f_name = currentUser.get("f_name");
         var e_l_name = currentUser.get("l_name");
-        var hometown = currentUser.get("hometown");
+        var e_hometown = currentUser.get("hometown");
         var e_email = currentUser.get("email");
         var e_phone = currentUser.get("phone");
         var e_ssn = currentUser.get("ssn");
+        console.log(e_email);
 
         if(e_f_name) $('#f_name').val(e_f_name);
         if(e_l_name) $('#l_name').val(e_l_name);
+        if(e_hometown) $('#hometown').val(e_hometown);
         if(e_email) $('#email').val(e_email);
         if(e_phone) $('#phone').val(e_phone);
         if(e_ssn) $('#ssn').val(e_ssn);
@@ -20,40 +22,46 @@ $('document').ready(function() {
         window.location.href = "login.html";
     }
 
+    //mask fields
+    $('#phone').mask('(000) 000-0000');
+    $('#ssn').mask('000-00-0000');
+
+
     $('#next_button').click(function() {
-        event.preventDefault();
+        var form = $('#P1_form');
+        form.validate({
 
-        //Form Validation
-        $("#email_form").validate({
-            rules: {
-                field: {
-                    email: true
-                }
-            }
         });
-
-        var f_name = $('#f_name').val();
-        var l_name = $('#l_name').val();
-        var hometown = $('#hometown').val();
-        var email = $('#email').val();
-        var phone = $('#phone').val();
-        var ssn = $('#ssn').val();
-
-        currentUser.set('f_name', f_name);
-        currentUser.set('l_name', l_name);
-        currentUser.set('hometown', hometown);
-        currentUser.set('email', email);
-        currentUser.set('phone', phone);
-        currentUser.set('ssn', ssn);
+        if (form.valid()) {
+        //Form Validation
         
-        currentUser.save(null, {
-            success: function(currentUser) {
-                alert('currentUser values updated');
-                window.location.href = "P2.html"; 
-            },
-            error: function(currentUser, error) {
-                alert('currentUser values failed to update, with error code: ' + error.message);
-            }
-        })
+            event.preventDefault();
+
+            var f_name = $('#f_name').val();
+            var l_name = $('#l_name').val();
+            var hometown = $('#hometown').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            var ssn = $('#ssn').val();
+
+            currentUser.set('f_name', f_name);
+            currentUser.set('l_name', l_name);
+            currentUser.set('hometown', hometown);
+            currentUser.set('email', email);
+            currentUser.set('phone', phone);
+            currentUser.set('ssn', ssn);
+
+            
+            currentUser.save(null, {
+                success: function(currentUser) {
+                    alert('currentUser values updated');
+                    console.log(hometown);
+                    window.location.href = "P2.html"; 
+                },
+                error: function(currentUser, error) {
+                    alert('currentUser values failed to update, with error code: ' + error.message);
+                }
+            });
+        }
     });
 });
