@@ -68,11 +68,14 @@
 			console.log("in signup");
 			var user = new Parse.User();
 			var username = $("#signup-username").val();
-		    var password = $("#signup-password").val();
-		    var confirmation = $("signup-password-confirm").val();
+		  var password = $("#signup-password").val();
+		  var confirmation = $("#signup-password-confirm").val();
 		    
 			user.set("username", username);
 			user.set("password", password);
+
+      console.log(password);
+      console.log(confirmation);
 
 			if(password != confirmation){
 				alert("passwords do not match");
