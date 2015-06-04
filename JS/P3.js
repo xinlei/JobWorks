@@ -34,7 +34,7 @@ $('document').ready(function() {
         var times = [];
         $('.times').each(function() {
             var time = $(this).val();
-            if(time) times.push(time);
+            times.push(time);
         });
 
         currentUser.set('start', start);

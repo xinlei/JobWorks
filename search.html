@@ -49,14 +49,26 @@
       <div class='col-md-9 main'>
         <row class='name'></row>
         <row class='contact'></row>
-        <!--
         <row class='drugs'>
           <p>Can pass the drug test</p>          
+          <div class="form-group">
+            <div class="radio">
+              <label><input type="radio" name="drug_test" value="1">Yes</label>
+              <label><input type="radio" name="drug_test" value="2">No</label>
+              <label><input type="radio" name="drug_test" value="3">Unknown</label>
+            </div>
+          </div>
         </row>
         <row class='background'>
           <p>Can pass the background check</p>          
+          <div class="form-group">
+            <div class="radio">
+              <label><input type="radio" name="background_check" value="1">Yes</label>
+              <label><input type="radio" name="background_check" value="2">No</label>
+              <label><input type="radio" name="background_check" value="3">Unknown</label>
+            </div>
+          </div>
         </row>
-        -->
         <row class='experience'>
           <h2>Experience</h2>          
         </row>
@@ -75,21 +87,18 @@
               <td>S</td>
             </tr>
             <tr>
-              <td>8am-4pm</td>
-              <td>8am-4pm</td>
-              <td>8am-4pm</td>
-              <td>8am-4pm</td>
-              <td>8am-4pm</td>
-              <td>8am-4pm</td>
-              <td>8am-4pm</td>
+              <td id="sunday" class='times'>8am-4pm</td>
+              <td id="monday" class='times'>8am-4pm</td>
+              <td id="tuesday" class='times'>8am-4pm</td>
+              <td id="wednesday" class='times'>8am-4pm</td>
+              <td id="thursday" class='times'>8am-4pm</td>
+              <td id="friday" class='times'>8am-4pm</td>
+              <td id="saturday" class='times'>8am-4pm</td>
             </tr>
           </table>          
         </row>
         <row class='industry'>
           <h2>Industry</h2>          
-        </row>
-        <row class='industry'>
-          <h4>Construction, Wholesale, Carpentry</h4>          
         </row>
       </div>
     </div>
