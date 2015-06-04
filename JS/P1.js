@@ -8,6 +8,7 @@ $('document').ready(function() {
         var e_email = currentUser.get("email");
         var e_phone = currentUser.get("phone");
         var e_ssn = currentUser.get("ssn");
+        var e_photo = currentUser.get("photo");
         console.log(e_email);
 
         if(e_f_name) $('#f_name').val(e_f_name);
@@ -16,6 +17,7 @@ $('document').ready(function() {
         if(e_email) $('#email').val(e_email);
         if(e_phone) $('#phone').val(e_phone);
         if(e_ssn) $('#ssn').val(e_ssn);
+        if(e_photo) $('#photo').val(e_photo);
 
     } else {
         // show the login page if not logged in
@@ -43,6 +45,10 @@ $('document').ready(function() {
             var email = $('#email').val();
             var phone = $('#phone').val();
             var ssn = $('#ssn').val();
+            var photo_file = document.getElementById("photo").files[0];
+            var photo_name = f_name + "_"+ l_name + ".jpg"
+            console.log(photo_name);
+            var photo = new Parse.File(photo_name, photo_file);
 
             currentUser.set('f_name', f_name);
             currentUser.set('l_name', l_name);
@@ -50,6 +56,7 @@ $('document').ready(function() {
             currentUser.set('email', email);
             currentUser.set('phone', phone);
             currentUser.set('ssn', ssn);
+            currentUser.set('photo', photo);
 
             
             currentUser.save(null, {
