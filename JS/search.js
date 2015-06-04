@@ -60,7 +60,7 @@ $('document').ready(function() {
             }
             query.find({
                 success: function(results){
-                    alert("Successfully retrieved " + results.length + " users.");
+                    //alert("Successfully retrieved " + results.length + " users.");
 
                     $('.sidebar').replaceWith(sidebarClone.clone(true));
 
@@ -130,12 +130,16 @@ function experienceToString(user){
                 $('.experience').append('<h4>Responsibilities include: '+employer.get('resp')+'</h4>');
                 $('.experience').append('<h4>The reason for leaving: '+employer.get('r_leave')+'</h4>');
                 $('.experience').append('<h4>For reference, contact: '+employer.get('contact_emp')+'</h4>');
+                if(i + 1 < results.length){
+                    $('.experience').append('<hr id="divider" />');
+                }
             }
         },
         error: function(error){
 
         }
     });
+
 }
 
 

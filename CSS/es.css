@@ -67,3 +67,10 @@ body, html {
     width: 140px;
     padding: 5px 5px; 
 }
+
+#divider {
+    width:50%;
+    margin: 0 auto;
+    height:1px;
+    background: grey;
+}

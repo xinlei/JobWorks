@@ -356,4 +356,8 @@
     font-family: 'Architects Daughter', cursive;
 }
 
-
+hr {
+    width:33%;
+    height:1px;
+    background: black;
+}
