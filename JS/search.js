@@ -110,6 +110,11 @@ $('document').ready(function() {
                 object.set('background_check', $('input:radio[name=background_check]:checked').val()); 
                 object.save();
             });
+
+            $(document.body).on('click', '.add-more', function(){
+                $('.note').append('<textarea class="form-control note" rows="3" placeholder="Write a note about this team member."></textarea>');
+                console.log(this);
+            }); 
           },
           error: function(object, error) {
           
@@ -117,6 +122,7 @@ $('document').ready(function() {
         });
     });
 });
+
 function experienceToString(user){
     var query = new Parse.Query("Employer");
     query.equalTo("createdBy", user);   
@@ -145,17 +151,23 @@ function experienceToString(user){
 
 function availabilityToString(user){
     var e_times = user.get("times");
-    if(e_times) {
-            var i  = 0; 
-            $('.times').each(function() {
-                if(e_times[i].length > 0){
-                    $(this).html(e_times[i]);
-                } else {
-                    $(this).html("-");
-                }
-                i++; 
-            });
-        }
+    console.log(e_times);
+    if(e_times && e_times.length > 0) {
+        console.log(e_times);
+        var i  = 0; 
+        $('.times').each(function() {
+            if(e_times[i].length > 0){
+                $(this).html(e_times[i]);
+            } else {
+                $(this).html("-");
+            }
+            i++; 
+        });
+    } else {
+        $('.times').each(function(){
+            $(this).html("-");
+        })
+    }
 }
 
 function industryToString(user){
@@ -226,3 +238,4 @@ function industryToString(user){
     }
     return industry_string;
 }
+

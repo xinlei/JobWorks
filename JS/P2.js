@@ -18,7 +18,7 @@ function loadEmployers(currentUser, employers, toggle){
 
     query.find({
         success: function(results) {
-            alert("Successfully retrieved " + results.length + " scores.");
+            //alert("Successfully retrieved " + results.length + " scores.");
             for (var i = 0; i < 4; i++) {
                 var index = i + 1;
 

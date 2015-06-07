@@ -74,3 +74,12 @@ body, html {
     height:1px;
     background: grey;
 }
+
+.add-more {
+    width: 100px;
+}
+
+.note {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
