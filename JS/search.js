@@ -3,6 +3,11 @@ Parse.initialize("O2zmBbmKr3hO6JJC0o5CxswEsEUxwIGpvviyYjsc", "Xexg4iA4TwdMu4hy6R
 $('document').ready(function() {
 
     var currentUser = Parse.User.current();
+
+    var team_member = null;
+
+    var last_note = null;
+
     if (currentUser) {
     } else {
         // show the login page if not logged in
@@ -86,13 +91,22 @@ $('document').ready(function() {
     });
 
     $(document.body).on('click', '.open-profile', function(){
+
+        //$(window).resize(function() {
+        //    $('.last-row').height($(window).height()-$('.last-row').offset().top);
+        //});
+
         $('.main').replaceWith(mainClone.clone(true));
         $('.main').toggle(true);
         var query = new Parse.Query(Parse.User);
         var id = $(this).attr('id');
-        
+
+        last_note = null;
+
         query.get(id, {
           success: function(object) {
+            team_member = object;
+
             $('.name').append('<h1>'+object.get('f_name')+' '+object.get('l_name')+'</h1>');
             $('.contact').append('<p>'+object.get('email')+' | '+object.get('phone')+'</p>');
             $('input:radio[name=drug_test]').eq(object.get('drug_test')-1).prop("checked", true); 
@@ -111,16 +125,32 @@ $('document').ready(function() {
                 object.save();
             });
 
-            $(document.body).on('click', '.add-more', function(){
-                $('.note').append('<textarea class="form-control note" rows="3" placeholder="Write a note about this team member."></textarea>');
-                console.log(this);
-            }); 
           },
           error: function(object, error) {
           
           }
         });
     });
+    
+    $(document.body).on('click', '.add-more', function(){
+                
+        var curr_note = $('<textarea class="form-control note" rows="3" placeholder="Write a note about this team member."></textarea>');
+        $('.note-section').prepend(curr_note);
+        console.log('add textarea');
+        
+        if(last_note){
+            var Note = Parse.Object.extend('Note');
+            var note = new Note();
+
+            note.set('content', last_note.val());
+            note.set('user', team_member);
+            note.set('creator', currentUser); 
+            note.save();
+            last_note.prop('disabled', true);
+        }
+        last_note = curr_note;
+        resetHeight();
+    }); 
 });
 
 function experienceToString(user){
@@ -140,12 +170,33 @@ function experienceToString(user){
                     $('.experience').append('<hr id="divider" />');
                 }
             }
+            appendNotes(user);
         },
         error: function(error){
 
         }
     });
 
+}
+
+function appendNotes(user){
+    var Note = Parse.Object.extend("Note");
+    var query = new Parse.Query(Note);
+    query.equalTo("user", user);
+    query.find({
+        success: function(notes) {
+            for (var i = 0; i < notes.length; i++){
+                var date = $('<h3 class="date">'+(notes[i].createdAt).toLocaleString()+'</h3>');
+                var curr_note = $('<textarea class="form-control note" rows="3" placeholder="Write a note about this team member."></textarea>');
+                curr_note.val(notes[i].get("content"));
+                curr_note.prop('disabled', true);
+                $('.note-section').prepend(curr_note);
+                $('.note-section').prepend(date);
+
+            }
+            resetHeight();
+        }
+    });
 }
 
 
@@ -239,3 +290,7 @@ function industryToString(user){
     return industry_string;
 }
 
+function resetHeight(){
+    var height = Math.max($(window).height(), $('.anchor').offset().top);
+    $('.last-row').height(height-$('.last-row').offset().top);
+}

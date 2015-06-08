@@ -80,6 +80,10 @@ body, html {
 }
 
 .note {
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin-top: 1px;
+    margin-bottom: 25px;
+}
+
+.date {
+    text-align: left;
 }
