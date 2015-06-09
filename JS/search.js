@@ -67,7 +67,9 @@ $('document').ready(function() {
             if(search_text){
                 query.startsWith("f_name", $("#query-basic").val());
             }
-            
+
+            query.notEqualTo("is_specialist", true);
+
             query.find({
                 success: function(results){
                     //alert("Successfully retrieved " + results.length + " users.");
@@ -114,6 +116,11 @@ $('document').ready(function() {
 
             $('.name').append('<h1>'+object.get('f_name')+' '+object.get('l_name')+'</h1>');
             $('.contact').append('<p>'+object.get('email')+' | '+object.get('phone')+'</p>');
+
+            if(object.get('crim')) {
+                alert('criminal!');
+                $('.criminal').append('<p>Has criminal background (self reported)</p>');
+            }
             $('input:radio[name=drug_test]').eq(object.get('drug_test')-1).prop("checked", true); 
             $('input:radio[name=background_check]').eq(object.get('background_check')-1).prop("checked", true); 
             $('.industry').append('<h4>'+industryToString(object)+'</h4>');
