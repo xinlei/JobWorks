@@ -114,11 +114,16 @@ $('document').ready(function() {
           success: function(object) {
             team_member = object;
 
+            var imageFile = object.get('photo');
+            if(imageFile){
+                var imageURL = imageFile.url();
+                $('.picture').append('<img class="photo" src='+imageURL+'>');
+            }
+
             $('.name').append('<h1>'+object.get('f_name')+' '+object.get('l_name')+'</h1>');
             $('.contact').append('<p>'+object.get('email')+' | '+object.get('phone')+'</p>');
 
             if(object.get('crim')) {
-                alert('criminal!');
                 $('.criminal').append('<p>Has criminal background (self reported)</p>');
             }
             $('input:radio[name=drug_test]').eq(object.get('drug_test')-1).prop("checked", true); 
@@ -303,6 +308,6 @@ function industryToString(user){
 }
 
 function resetHeight(){
-    var height = Math.max($(window).height(), $('.anchor').offset().top);
+    var height = Math.max($(window).height(), $('.anchor').offset().top) + 25;
     $('.last-row').height(height-$('.last-row').offset().top);
 }

@@ -87,3 +87,8 @@ body, html {
 .date {
     text-align: left;
 }
+
+.photo {
+    width: 200px;
+    margin-top: 25px;
+}
