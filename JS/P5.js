@@ -18,7 +18,7 @@ $('document').ready(function() {
         currentUser.set('vet',vet);
         currentUser.save(null, {
             success: function(currentUser) {
-                alert('currentUser values updated');
+                //alert('currentUser values updated');
                 window.location.href = "P6.html"; 
             },
             error: function(currentUser, error) {

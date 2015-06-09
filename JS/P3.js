@@ -42,7 +42,7 @@ $('document').ready(function() {
         currentUser.set('times', times); 
         currentUser.save(null, {
             success: function(currentUser) {
-                alert('currentUser values updated');
+                //alert('currentUser values updated');
                 window.location.href = "P4.html"; 
             },
             error: function(currentUser, error) {

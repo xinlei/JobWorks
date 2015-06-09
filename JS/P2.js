@@ -101,7 +101,7 @@ function updateEmployers(currentUser){
 
             employer.save(null, {
                 success: function(currentUser) {
-                    alert('currentUser values updated');
+                    //alert('currentUser values updated');
                 },
                 error: function(currentUser, error) {
                     alert('displaye currentUser values failed to update, with error code: ' + error.message);

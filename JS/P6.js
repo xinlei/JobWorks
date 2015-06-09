@@ -140,7 +140,7 @@ $('document').ready(function() {
         currentUser.set('traits',traits);
         currentUser.save(null, {
             success: function(currentUser) {
-                alert('currentUser values updated');
+                //alert('currentUser values updated');
                 window.location.href = "final_landing.html"; 
             },
             error: function(currentUser, error) {

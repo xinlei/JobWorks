@@ -19,6 +19,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+    <script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+
+    <script src="JS/profile.js"></script>
+
+    <script src="JS/search.js"></script>
 </head>
 <body>
 	<div id="container">
@@ -26,57 +32,55 @@
 	<div class="col-md-8 col-md-offset-2 content">
 	<div id="row">
 		<div class="col-md-3 image">
-			<div id="row">
-				<img src="IMG/paul.JPG">
-			</div>
-			<div id="row" class="button">
-				<button class="btn btn-default btn-md btn-block" href="">Personal Information</button>
-			</div>
-			<div id="row" class="button">
-				<button class="btn btn-default btn-md btn-block" href="">Job Experiences</button>
-			</div>
-			<div id="row" class="button">
-				<button class="btn btn-default btn-md btn-block" href="">Paul's Story</button>
-			</div>
+			<div id="row" class="picture"></div>
 		</div>
 		<div class="col-md-9">
 			<div id="row">
-				<h1>Paul Mathis</h1>
-				<h5 class="link"><a href="">Contact</a></h5>
-				<h5 class="link"><a href="">Share</a></h5>
+				<h1 class='name'></h1>
+				<h5 class="link"><a class="contact" href="">Contact</a></h5>
+				<!--<h5 class="link"><a href="">Share</a></h5>-->
 				<h5 class="link"><a href="final_landing.html">Back</a></h5>
 			</div>
 			<div class="divider"></div>
-			<div id="row"><h3>Industries: Construction, Wholesale, Carpentry</h3></div>
-			<div id="row"><h3>Palo Alto, CA</h3></div>
-			<div id="row"><h3 class="story">
+			<div id="row"><h3>Industries: </h3><h3 class="industry"></h3></div>
+			<div id="row"><h3 class="location"></h3></div>
+			<!--<div id="row"><h3 class="story">
 				<p>My name is Paul Mathis and this is my story.</p><p>I am originally from Atlanta, Georgia and received my education from Garfield Heights High School. I came to the Bay Area in 2004 because I wanted to work in the construction industry. I am interested in construction and wholesale jobs with my skills in flooring, carpentry, and forklift operation. <a href="">Read more</a></p></h3>
 			</div>
+
+			-->
 			<div class="divider-2"></div>
-			<div id="row" class="title"><h3>Availability</h3></div>
-			<div id="row">
-				<table class="days">
-					<tr>
-					<td>S</td>
-					<td>M</td>
-					<td>T</td>
-					<td>W</td>
-					<td>Th</td>
-					<td>F</td>
-					<td>S</td>
-				</tr>
-				<tr>
-					<td>8am-4pm</td>
-					<td>8am-4pm</td>
-					<td>8am-4pm</td>
-					<td>8am-4pm</td>
-					<td>8am-4pm</td>
-					<td>8am-4pm</td>
-					<td>8am-4pm</td>
-				</tr>
-				</table>
-			</div>
+			<row class='availabilty'>
+	          <h2>Availability</h2>
+	        </row>
+	          <row>
+	            <table class="days">
+	              <tr>
+	             
+	              <td>Mon</td>
+	              <td>Tues</td>
+	              <td>Wed</td>
+	              <td>Thur</td>
+	              <td>Fri</td>
+	              <td>Sat</td>
+	              <td>Sun</td>
+	            </tr>
+	            <tr>
+	              <td id="monday" class='times'>8am-4pm</td>
+	              <td id="tuesday" class='times'>8am-4pm</td>
+	              <td id="wednesday" class='times'>8am-4pm</td>
+	              <td id="thursday" class='times'>8am-4pm</td>
+	              <td id="friday" class='times'>8am-4pm</td>
+	              <td id="saturday" class='times'>8am-4pm</td>
+	              <td id="sunday" class='times'>8am-4pm</td>
+	            </tr>
+	          </table>          
+	        </row>
 			<div class="divider2"></div>
+			<row class='experience'>
+	          <h2>Experience</h2>          
+	        </row>
+			<!--
 			<div id="row" class="title"><h3>Core Skills</h3></div>
 			<div id="row">
 				<table class="skills">
@@ -85,6 +89,7 @@
 					<td><img src="IMG/ICON/forklift.png"></td>
 				</table>
 			</div>
+
 			<div id="row">
 				<table class="skills">
 					<td>Carpentry</td>
@@ -93,6 +98,9 @@
 				</table>
 				<div id="row" class="divider-2"></div>
 			</div>
+			-->
+
+			<div class='anchor'></div>
 		</div>
 	</div>
 </div>

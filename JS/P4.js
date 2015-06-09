@@ -70,7 +70,7 @@ $('document').ready(function() {
         currentUser.set('o_interests',o_interests);
         currentUser.save(null, {
             success: function(currentUser) {
-                alert('currentUser values updated');
+                //alert('currentUser values updated');
                 window.location.href = "P5.html"; 
             },
             error: function(currentUser, error) {

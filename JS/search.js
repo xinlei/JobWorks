@@ -135,7 +135,7 @@ $('document').ready(function() {
             });
 
             availabilityToString(object); 
-            experienceToString(object);
+            experienceToString(object, resetHeight);
 
             $("input:radio[name=background_check]").change(function () {
                 object.set('background_check', $('input:radio[name=background_check]:checked').val()); 
@@ -170,7 +170,7 @@ $('document').ready(function() {
     }); 
 });
 
-function experienceToString(user){
+function experienceToString(user, showNotes){
     var query = new Parse.Query("Employer");
     query.equalTo("createdBy", user);   
 
@@ -187,7 +187,7 @@ function experienceToString(user){
                     $('.experience').append('<hr id="divider" />');
                 }
             }
-            appendNotes(user);
+            showNotes(user);
         },
         error: function(error){
 

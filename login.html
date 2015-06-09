@@ -93,12 +93,12 @@
       console.log(confirmation);
 
 			if(password != confirmation){
-				alert("passwords do not match");
+				alert("Oops! Passwords do not match");
 				
 			} else {
 				user.signUp(null, {
 				  	success: function(user) {
-				    	alert("success");
+				    	//alert("success");
               if(is_specialist){
                 window.location.href = "search.html";
               } else {

@@ -17,7 +17,7 @@ $('document').ready(function() {
         if(e_email) $('#email').val(e_email);
         if(e_phone) $('#phone').val(e_phone);
         if(e_ssn) $('#ssn').val(e_ssn);
-        if(e_photo) $('#photo').val(e_photo);
+        //if(e_photo) $('#photo').val(e_photo);
 
     } else {
         // show the login page if not logged in
@@ -61,8 +61,8 @@ $('document').ready(function() {
             
             currentUser.save(null, {
                 success: function(currentUser) {
-                    alert('currentUser values updated');
-                    console.log(hometown);
+                    //alert('currentUser values updated');
+                    //console.log(hometown);
                     window.location.href = "P2.html"; 
                 },
                 error: function(currentUser, error) {
