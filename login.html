@@ -33,12 +33,21 @@
           <button class="btn btn-primary btn-lg">Log In</button>
         </form>
 
-        <form id="signup-form">
+        <form class="form-horizontal" id="signup-form">
           <h2>Sign Up</h2>
           <div class="error" style="display:none"></div>
-          <input type="text" class="form-control" id="signup-username" placeholder="Username" />
-          <input type="password" class="form-control" id="signup-password" placeholder="Create a Password" />
-          <input type="password" class="form-control" id="signup-password-confirm" placeholder="Confirm Password" />
+          <input type="text" class="form-control signup" id="signup-username" placeholder="Username" />
+          <input type="password" class="form-control signup" id="signup-password" placeholder="Create a Password" />
+          <input type="password" class="form-control signup" id="signup-password-confirm" placeholder="Confirm Password" />          
+          <div class="form-group">
+            <label class="col-sm-5 is_specialist">Are you a employment specialist?</label>
+            <div class="col-sm-7 radio">
+
+              <label><input type="radio" name="is_specialist" value="true">Yes</label>
+              <label><input type="radio" name="is_specialist" value="false">No</label>
+            </div>
+          </div>
+      
           <button class="btn btn-primary btn-lg">Sign Up</button>
         </form>
     </div>
@@ -55,7 +64,11 @@
 
 			Parse.User.logIn(username, password, {
 		  		success: function(user) {
-		    		window.location.href = "P1.html";
+            if(user.get('is_specialist')){
+              window.location.href = "search.html";
+            } else {
+              window.location.href = "P1.html";
+            }
 		  		},
 		  		error: function(user, error) {
 		    		alert("Oops! Double check your username and password.");
@@ -70,9 +83,11 @@
 			var username = $("#signup-username").val();
 		  var password = $("#signup-password").val();
 		  var confirmation = $("#signup-password-confirm").val();
+      var is_specialist = ($('input:radio[name=is_specialist]:checked').val() === "true")
 		    
 			user.set("username", username);
 			user.set("password", password);
+      user.set('is_specialist', is_specialist); 
 
       console.log(password);
       console.log(confirmation);
@@ -84,7 +99,11 @@
 				user.signUp(null, {
 				  	success: function(user) {
 				    	alert("success");
-				    	window.location.href = "P1.html";
+              if(is_specialist){
+                window.location.href = "search.html";
+              } else {
+				    	  window.location.href = "P1.html";
+              }
 				  	},
 				  	error: function(user, error) {
 				    	alert(error.message);

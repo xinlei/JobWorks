@@ -9,3 +9,7 @@
 #login-username, #login-password, #signup-username, #signup-password, #signup-password-confirm {
 	height: 34px;
 }
+
+#signup-username, #signup-password, #signup-password-confirm {
+    margin-bottom: 10px;
+}

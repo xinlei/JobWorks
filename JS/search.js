@@ -60,9 +60,14 @@ $('document').ready(function() {
             event.preventDefault();
             var query = new Parse.Query(Parse.User);
 
-            if($("#query-basic").val()){
+            var search_text = $("#query-basic").val();
+
+            if(search_text === 'all') search_text = null; 
+
+            if(search_text){
                 query.startsWith("f_name", $("#query-basic").val());
             }
+            
             query.find({
                 success: function(results){
                     //alert("Successfully retrieved " + results.length + " users.");
