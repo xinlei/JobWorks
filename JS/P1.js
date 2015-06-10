@@ -46,17 +46,18 @@ $('document').ready(function() {
             var phone = $('#phone').val();
             var ssn = $('#ssn').val();
             var photo_file = document.getElementById("photo").files[0];
-            var photo_name = f_name + "_"+ l_name + ".jpg"
-            console.log(photo_name);
-            var photo = new Parse.File(photo_name, photo_file);
-
+            if(photo_file){
+                var photo_name = f_name + "_"+ l_name + ".jpg";
+                var photo = new Parse.File(photo_name, photo_file);
+                currentUser.set('photo', photo);
+            }
             currentUser.set('f_name', f_name);
             currentUser.set('l_name', l_name);
             currentUser.set('hometown', hometown);
             currentUser.set('email', email);
             currentUser.set('phone', phone);
             currentUser.set('ssn', ssn);
-            currentUser.set('photo', photo);
+            
 
             
             currentUser.save(null, {

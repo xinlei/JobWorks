@@ -101,6 +101,7 @@ function updateEmployers(currentUser){
 
             employer.save(null, {
                 success: function(currentUser) {
+                    window.location.href = "P3.html";
                     //alert('currentUser values updated');
                 },
                 error: function(currentUser, error) {
@@ -164,7 +165,7 @@ $('document').ready(function() {
         $("#employer1").toggle();
         $(this).toggle();
         $('#add_job_button1').toggle();
-        clean(0, employers, removed);
+        clean(0);
     });
     $("#add_job_button2").click(function() {
         $("#employer2").toggle();
@@ -175,7 +176,7 @@ $('document').ready(function() {
         $("#employer2").toggle();
         $(this).toggle();
         $('#add_job_button2').toggle();
-        clean(1, employers, removed);
+        clean(1);
     });
     $("#add_job_button3").click(function() {
         $("#employer3").toggle();
@@ -186,7 +187,7 @@ $('document').ready(function() {
         $("#employer3").toggle();
         $(this).toggle();
         $('#add_job_button3').toggle();
-        clean(2, employers, removed);
+        clean(2);
         });
     $("#add_job_button4").click(function() {
         $("#employer4").toggle();
@@ -197,6 +198,6 @@ $('document').ready(function() {
         $("#employer4").toggle();
         $(this).toggle();
         $('#add_job_button4').toggle();
-        clean(3, employers, removed);
+        clean(3);
     });
 });
